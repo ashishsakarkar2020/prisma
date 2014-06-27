@@ -1,7 +1,8 @@
 <footer class="content-info" role="contentinfo">
-  <div class="container">
+  	<div class="text-center">
     <?php dynamic_sidebar('sidebar-footer'); ?>
-  </div>
+    <p>footer</p>
+    </div>
 </footer>
 
 <?php wp_footer(); ?>

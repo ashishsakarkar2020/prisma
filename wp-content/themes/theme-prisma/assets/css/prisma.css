@@ -1,0 +1,29 @@
+body {
+	border-top: 10px solid #29235c;
+	background: url('../img/bg.jpg') no-repeat top left;
+}
+
+.container {
+	width: 780px;
+	margin: 0;
+	margin-left: 130px;
+}
+
+.main {
+	background: #fff;
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+.mainheader {
+	height: 110px;
+}
+
+.nav-main {
+	width: 110px;
+	padding-top: 110px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	text-align: right;
+}
