@@ -7,12 +7,14 @@ body {
 	width: 780px;
 	margin: 0;
 	margin-left: 130px;
+	padding: 0;
 }
 
 .main {
 	background: #fff;
 	border: 1px solid #eee;
 	padding: 10px;
+	position: relative;
 }
 
 .mainheader {
@@ -20,10 +22,22 @@ body {
 }
 
 .nav-main {
-	width: 110px;
+	width: 130px;
 	padding-top: 110px;
 	position: absolute;
 	top: 10px;
 	left: 0;
 	text-align: right;
+}
+
+.section {
+	height: 500px;
+	position: relative;
+}
+
+.nav-section {
+	width: 50px;
+	position: absolute;
+	top: 0;
+	right: -60px;
 }
