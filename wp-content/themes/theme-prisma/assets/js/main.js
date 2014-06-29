@@ -23,6 +23,21 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      
+        // initiate page scroller plugin
+        $('body').pageScroller({
+          sectionClass: 'section',
+        });
+
+        // prev scroll button
+        $('.prev-section').bind('click', function(){
+            pageScroller.prev();
+        });
+        // next scroll button
+        $('.next-section').bind('click', function(){
+            pageScroller.next();
+        });
+
     }
   },
   // Home page
