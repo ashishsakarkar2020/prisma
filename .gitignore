@@ -34,4 +34,5 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/theme-prisma/
 wp-content/themes/theme-prisma/node_modules/
+wp-content/themes/theme-prisma/bower_components/
 wp-content/themes/theme-prisma/assets/img/
