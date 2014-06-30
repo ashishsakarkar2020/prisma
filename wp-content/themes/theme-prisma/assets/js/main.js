@@ -38,6 +38,8 @@ var Roots = {
             pageScroller.next();
         });
 
+        $('ul.sf-menu').superfish();
+
     }
   },
   // Home page
