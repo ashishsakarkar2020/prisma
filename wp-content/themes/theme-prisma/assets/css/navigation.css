@@ -17,6 +17,13 @@
 .sf-menu > li {
 	float: left;
 }
+
+.sf-menu > li > a {
+	display: block;
+	text-align: right;
+	padding-right: 50px;
+}
+
 .sf-menu li:hover > ul,
 .sf-menu li.sfHover > ul {
 	display: block;
@@ -31,7 +38,6 @@
 	left: 100%;
 }
 
-
 .sf-vertical ul {
 	left:	100%;
 	top: 0;
@@ -44,9 +50,12 @@
 .sf-vertical li {
   width: 100%;
 }
-.sf-vertical ul li {
-  width: 200px;
-  float: left;
+.level-2 {
+	min-width: 200px;
+}
+
+.column {
+	width: 420px;
 }
 
 /*** alter arrow directions ***/

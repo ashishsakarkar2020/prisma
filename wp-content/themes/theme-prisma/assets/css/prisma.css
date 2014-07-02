@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-	width: 780px;
+	width: 780px !important; 
 	margin: 0;
 	margin-left: 130px;
 	padding: 0;
@@ -27,7 +27,6 @@ body {
 	position: absolute;
 	top: 10px;
 	left: 0;
-	text-align: right;
 }
 
 .section {
@@ -40,4 +39,8 @@ body {
 	position: absolute;
 	top: 0;
 	right: -60px;
+}
+
+.nav-footer li {
+	display: inline;
 }
