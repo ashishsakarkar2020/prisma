@@ -43,13 +43,13 @@ $especes = array(
       endif;
     ?>
    	<ul class="level-1 nav sf-menu sf-vertical">
-   		<li><a href="<?php echo site_url('/'); ?>">Accueil</a></li>
+   		<li><a href="<?php echo site_url('/'); ?>">Accueil <span></span></a></li>
    		<li>
-        <a href="<?php echo get_permalink( 7 ); ?>"><?php echo get_the_title( 7 ); ?></a>
+        <a href="<?php echo get_permalink( 7 ); ?>"><?php echo get_the_title( 7 ); ?><span></span></a>
          <?php if ( has_nav_menu( 'qui-sommes-nous' ) ) {wp_nav_menu($qsn); }; ?>
       </li>
    		<li>
-        <a href="<?php echo site_url('/'); ?>">Services &amp; produits</a>
+        <a href="<?php echo site_url('/'); ?>">Services &amp; produits<span></span></a>
         <ul class="level-2 column">
           <li class="row-fluid">
             <div class="col-xs-6 services">
@@ -64,7 +64,7 @@ $especes = array(
         </ul>
       </li>
    		<li>
-        <a href="<?php echo get_permalink( 36 ); ?>"><?php echo get_the_title( 36 ); ?></a>
+        <a href="<?php echo get_permalink( 36 ); ?>"><?php echo get_the_title( 36 ); ?><span></span></a>
          <?php
           $qsn = wp_list_pages('title_li=&child_of=36&echo=0');
           if ($qsn) { ?>
@@ -74,7 +74,7 @@ $especes = array(
           <?php } ?>
       </li>
    		<li>
-        <a href="<?php echo get_permalink( 34 ); ?>"><?php echo get_the_title( 34 ); ?></a>
+        <a href="<?php echo get_permalink( 34 ); ?>"><?php echo get_the_title( 34 ); ?><span></span></a>
          <?php
           $qsn = wp_list_pages('title_li=&child_of=34&echo=0');
           if ($qsn) { ?>
@@ -84,10 +84,10 @@ $especes = array(
           <?php } ?>
       </li>
    		<li>
-        <a href="#">Espèces</a>
+        <a href="#">Espèces<span></span></a>
         <?php if ( has_nav_menu( 'especes' ) ) {wp_nav_menu($especes); }; ?>
       </li>
-   		<li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
-   		<li><a href="<?php echo site_url('/espace-client'); ?>">Espace client</a></li>
+   		<li><a href="<?php echo site_url('/contact'); ?>">Contact<span></span></a></li>
+   		<li><a href="<?php echo site_url('/espace-client'); ?>">Espace client<span></span></a></li>
    	</ul>
 </nav

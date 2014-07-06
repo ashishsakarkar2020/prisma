@@ -1,5 +1,5 @@
 /*** ESSENTIAL STYLES ***/
-.sf-menu, .sf-menu * {
+.sf-menu, .sf-menu *{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -21,7 +21,6 @@
 .sf-menu > li > a {
 	display: block;
 	text-align: right;
-	padding-right: 50px;
 }
 
 .sf-menu li:hover > ul,
