@@ -53,6 +53,13 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on the about us page
     }
+  },
+  page_template_page_contenu_php: {
+    init: function() {
+      // JavaScript to be fired on the contenu template page
+    
+      $('.slider').slick();
+    }
   }
 };
 

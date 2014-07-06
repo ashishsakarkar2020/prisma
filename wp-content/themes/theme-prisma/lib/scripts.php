@@ -15,7 +15,7 @@ function roots_scripts() {
 
   wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, null);
   wp_enqueue_style('navigation', get_template_directory_uri() . '/assets/css/navigation.css', false, null);
-  wp_enqueue_style('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick.css', false, null);
+  wp_enqueue_style('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.css', false, null);
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -32,7 +32,7 @@ function roots_scripts() {
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
    wp_register_script('superfish', get_template_directory_uri() . '/bower_components/superfish/dist/js/superfish.min.js', array(), null, true);
-  wp_register_script('slick', get_template_directory_uri() . '/bower_components/slick/slick.min.js', array(), null, true);
+  wp_register_script('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.min.js', array(), null, true);
   wp_register_script('sectionscroller', get_template_directory_uri() . '/assets/js/plugins/jquery.pagescroller.lite.js', array(), null, true);
   wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '0fc6af96786d8f267c8686338a34cd38', true);
   wp_register_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);

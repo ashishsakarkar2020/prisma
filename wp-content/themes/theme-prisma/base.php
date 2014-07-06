@@ -23,6 +23,7 @@
 
       <main class="main" role="main">
         <?php include roots_template_path(); ?>
+        <?php get_search_form(); ?>
       </main><!-- /.main -->
 
       <?php get_template_part('templates/footer'); ?>

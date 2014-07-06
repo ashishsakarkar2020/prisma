@@ -1,8 +1,9 @@
 <?php
 /*
-Template Name: custom
+Template Name: Institutionnelle
 */
 ?>
+
 
 <?php get_template_part('templates/page', 'header'); ?>
 <?php get_template_part('templates/content', 'page'); ?>
