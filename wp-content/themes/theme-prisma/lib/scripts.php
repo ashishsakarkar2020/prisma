@@ -15,6 +15,7 @@ function roots_scripts() {
 
   wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, null);
   wp_enqueue_style('navigation', get_template_directory_uri() . '/assets/css/navigation.css', false, null);
+  wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/fonts.css', false, null);
   wp_enqueue_style('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.css', false, null);
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
