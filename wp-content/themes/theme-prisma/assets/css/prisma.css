@@ -1,6 +1,7 @@
 body {
 	border-top: 10px solid #29235c;
 	background: url('../img/bg.jpg') no-repeat top left;
+	font-family: 'advent', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .container {
@@ -39,22 +40,6 @@ body {
 	text-transform: uppercase;
 	font-size: 14px;
 }
-.nav-main .level-1 > li > a {
-	padding-right: 32px;
-	position: relative;
-}
-
-.nav-main .level-1 > li > a span {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	height: 32px;
-	width: 32px;
-	background-image: url('../img/picto-menu.png');
-	background-repeat: no-repeat;
-}
-
 
 .section {
 	min-height: 300px;
@@ -93,6 +78,9 @@ body {
 	position: absolute;
 	top: 49px;
 	right: -71px;
+}
+.nav-main .level-1 > li > a {
+	padding-right: 50px;
 }
 
 .nav-footer li {
