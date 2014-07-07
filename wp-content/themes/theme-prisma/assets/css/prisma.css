@@ -8,11 +8,16 @@ body {
 	margin: 0;
 	margin-left: 130px;
 	padding: 0;
+	position: relative;
 }
 
 .main {
 	background: #fff;
 	border: 1px solid #eee;
+	position: relative;
+}
+
+.wrapper {
 	padding: 10px;
 	position: relative;
 }
@@ -30,7 +35,7 @@ body {
 	padding-top: 110px;
 	position: absolute;
 	top: 10px;
-	left: 0;
+	left: -130px;
 	text-transform: uppercase;
 	font-size: 14px;
 }
@@ -52,8 +57,9 @@ body {
 
 
 .section {
-	height: 500px;
+	min-height: 300px;
 	position: relative;
+	margin-bottom: 20px;
 }
 
 .nav-section {
@@ -63,6 +69,49 @@ body {
 	right: -60px;
 }
 
+.nav-section.affix {
+	position: fixed;
+	top: 10px;
+	left: 920px;
+
+}
+
+.nav-section a, .nav-count {
+	height: 50px;
+	line-height: 50px;
+	background: #ccc;
+	text-align: center;
+}
+
+.nav-section a {
+	display: block;	
+	margin-bottom: 10px;
+}
+
+.nav-count {
+	width: 50px;
+	position: absolute;
+	top: 49px;
+	right: -71px;
+}
+
 .nav-footer li {
 	display: inline;
+}
+
+.acces {
+	background: #ccc;
+	padding: 10px;
+}
+
+.pageScrollerNav {
+	display: none;
+}
+
+.ombrage {
+	-moz-box-shadow: 0px 0px 8px 0px #ccc;
+	-webkit-box-shadow: 0px 0px 8px 0px #ccc;
+	-o-box-shadow: 0px 0px 8px 0px #ccc;
+	box-shadow: 0px 0px 8px 0px #ccc;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#ccc, Direction=NaN, Strength=10);
 }

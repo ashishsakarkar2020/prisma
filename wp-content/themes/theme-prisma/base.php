@@ -21,7 +21,7 @@
           get_template_part('templates/header');
       ?>
 
-      <main class="main" role="main">
+      <main class="main wrapper ombrage" role="main">
         <?php include roots_template_path(); ?>
         <?php get_search_form(); ?>
       </main><!-- /.main -->

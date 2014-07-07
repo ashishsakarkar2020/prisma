@@ -11,7 +11,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '9880649384aea9f1ee166331c0a30daa');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'bf6d0b87f9e0c2a25325178fb7ada16f');
 
   wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, null);
   wp_enqueue_style('navigation', get_template_directory_uri() . '/assets/css/navigation.css', false, null);
@@ -34,7 +34,7 @@ function roots_scripts() {
    wp_register_script('superfish', get_template_directory_uri() . '/bower_components/superfish/dist/js/superfish.min.js', array(), null, true);
   wp_register_script('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.min.js', array(), null, true);
   wp_register_script('sectionscroller', get_template_directory_uri() . '/assets/js/plugins/jquery.pagescroller.lite.js', array(), null, true);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '0fc6af96786d8f267c8686338a34cd38', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), 'bc834a4e4087304d671711b054aeebee', true);
   wp_register_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
 
   wp_enqueue_script('modernizr');

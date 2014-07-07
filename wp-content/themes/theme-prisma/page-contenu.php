@@ -7,18 +7,17 @@ Template Name: Contenu
 
 <?php
 
- 
 $images = get_field('slider');
  
 if( $images ): ?>
 
     <div id="slider" class="slider">
 
-            <?php foreach( $images as $image ): ?>
-                <div>
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
-                </div>
-            <?php endforeach; ?>
+        <?php foreach( $images as $image ): ?>
+            <div>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
+            </div>
+        <?php endforeach; ?>
     </div>
 
 
