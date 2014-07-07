@@ -49,6 +49,17 @@
 .sf-vertical li {
   width: 100%;
 }
+
+
+
+.nav-main .level-1 > li > a {
+	vertical-align: middle;
+}
+
+.nav-main .level-1 > li > a span {
+	font-size: 1.6em;
+}
+
 .level-2 {
 	min-width: 200px;
 }
@@ -57,16 +68,3 @@
 	width: 420px;
 }
 
-/*** alter arrow directions ***/
-.sf-vertical.sf-arrows > li > .sf-with-ul:after {
-  margin-top: -5px;
-  margin-right: -3px;
-  border-color: transparent;
-  border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
-  border-left-color: rgba(255,255,255,.5);
-}
-.sf-vertical.sf-arrows li > .sf-with-ul:focus:after,
-.sf-vertical.sf-arrows li:hover > .sf-with-ul:after,
-.sf-vertical.sf-arrows .sfHover > .sf-with-ul:after {
-  border-left-color: white;
-}
