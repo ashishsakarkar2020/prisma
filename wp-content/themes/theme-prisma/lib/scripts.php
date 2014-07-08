@@ -11,12 +11,20 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'bf6d0b87f9e0c2a25325178fb7ada16f');
 
-  wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, null);
-  wp_enqueue_style('navigation', get_template_directory_uri() . '/assets/css/navigation.css', false, null);
-  wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/fonts.css', false, null);
-  wp_enqueue_style('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.css', false, null);
+  
+  wp_register_style('main', get_template_directory_uri() . '/assets/css/main.min.css', false, '66f9026a2b1ff7f12c2f1794f899c3b5');
+  wp_register_style('fonts', get_template_directory_uri() . '/assets/css/fonts.css', false, null);
+  wp_register_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, null);
+  wp_register_style('navigation', get_template_directory_uri() . '/assets/css/navigation.css', false, null);
+  wp_register_style('slick', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.css', false, null);
+  wp_register_style('ie', get_template_directory_uri() . '/assets/css/ie.css', false, null);
+
+  wp_enqueue_style('main');
+  wp_enqueue_style('fonts');
+  wp_enqueue_style('prisma');
+  wp_enqueue_style('navigation');
+  wp_enqueue_style('slick');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
