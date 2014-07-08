@@ -1,4 +1,12 @@
 /*** ESSENTIAL STYLES ***/
+.nav-main {
+	width: 180px;
+	padding-top: 110px;
+	position: absolute;
+	left: -180px;
+	text-transform: uppercase;
+}
+
 .sf-menu, .sf-menu *{
 	margin: 0;
 	padding: 0;
@@ -40,31 +48,54 @@
 .sf-vertical ul {
 	left:	100%;
 	top: 0;
-	padding: 1em;
 	background: #fff;
 }
+
 .sf-vertical > li {
   float: none;
-}
-.sf-vertical li {
   width: 100%;
 }
 
-
-
+.nav-main .level-1 {
+	border-top: 1px #ccc dashed;
+}
+.nav-main li {
+	border-bottom: 1px #ccc dashed;
+}
 .nav-main .level-1 > li > a {
-	vertical-align: middle;
+	padding: 4px;
+	min-height: 50px;
+	line-height: 50px;
 }
 
-.nav-main .level-1 > li > a span {
-	font-size: 1.6em;
+.nav-main .level-1 > li > a span.icon {
+	font-size: 1.5em;
 }
 
 .level-2 {
-	min-width: 200px;
+	min-width: 250px;
+	border: 1px solid #ccc;
+	border-left: none;
+	padding: 10px;
+}
+
+.level-2 h2 {
+	border-bottom: 1px #ccc dashed;
+	padding: 10px;
 }
 
 .column {
-	width: 420px;
+	width: 500px;
+}
+
+div.vbloc { 
+  width:auto;
+  max-width: 100px;
+  margin-right: 10px;
+  display:inline-block;
+  vertical-align:middle;
+  line-height: 1.4em;
+  text-align:right; /* on rétablit l'alignement du texte */
+  word-wrap: break-word;  
 }
 

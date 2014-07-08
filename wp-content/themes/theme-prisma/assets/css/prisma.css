@@ -7,7 +7,7 @@ body {
 .container {
 	width: 780px; 
 	margin: 0;
-	margin-left: 130px;
+	margin-left: 180px;
 	padding: 0;
 	position: relative;
 }
@@ -31,16 +31,6 @@ body {
 	display: block;
 }
 
-.nav-main {
-	width: 130px;
-	padding-top: 110px;
-	position: absolute;
-	top: 10px;
-	left: -130px;
-	text-transform: uppercase;
-	font-size: 14px;
-}
-
 .section {
 	min-height: 300px;
 	position: relative;
@@ -57,7 +47,7 @@ body {
 .nav-section.affix {
 	position: fixed;
 	top: 10px;
-	left: 920px;
+	left: 970px;
 
 }
 

@@ -38,13 +38,27 @@ $especes = array(
 
 <nav class="nav-main" role="navigation">
    	<ul class="level-1 nav sf-menu sf-vertical">
-   		<li><a href="<?php echo site_url('/'); ?>">Accueil <span class="icon icon-accueil"></span></a></li>
    		<li>
-        <a href="<?php echo get_permalink( 7 ); ?>"><?php echo get_the_title( 7 ); ?> <span class="icon icon-prisma"></span></a>
-         <?php if ( has_nav_menu( 'qui-sommes-nous' ) ) {wp_nav_menu($qsn); }; ?>
+        <a href="<?php echo site_url('/'); ?>">
+          <div class="vbloc">Accueil</div>
+          <div class="vbloc"><span class="icon icon-accueil"></span></div>
+        </a>
       </li>
    		<li>
-        <a href="<?php echo site_url('/'); ?>">Services &amp; produits <span class="icon icon-produits"></span></a>
+        <a href="<?php echo get_permalink( 7 ); ?>">
+          <div class="vbloc"><?php echo get_the_title( 7 ); ?></div>
+          <div class="vbloc"><span class="icon icon-prisma"></span></div>
+        </a>
+         <?php if ( has_nav_menu( 'qui-sommes-nous' ) ) {?>
+         <?php wp_nav_menu($qsn);?>
+        <?php  }; ?>
+
+      </li>
+   		<li>
+        <a href="<?php echo site_url('/'); ?>">
+          <div class="vbloc">Services &amp; produits</div>
+          <div class="vbloc"><span class="icon icon-produits"></span></div>
+        </a>
         <ul class="level-2 column">
           <li class="row-fluid">
             <div class="col-xs-6 services">
@@ -59,7 +73,10 @@ $especes = array(
         </ul>
       </li>
    		<li>
-        <a href="<?php echo get_permalink( 34 ); ?>"><?php echo get_the_title( 34 ); ?> <span class="icon icon-retd"></span></a>
+        <a href="<?php echo get_permalink( 34 ); ?>">
+          <div class="vbloc"><?php echo get_the_title( 34 ); ?></div>
+          <div class="vbloc"><span class="icon icon-retd"></span></div>
+        </a>
          <?php
           $qsn = wp_list_pages('title_li=&child_of=34&echo=0');
           if ($qsn) { ?>
@@ -69,7 +86,10 @@ $especes = array(
           <?php } ?>
       </li>
       <li>
-        <a href="<?php echo get_permalink( 36 ); ?>"><?php echo get_the_title( 36 ); ?> <span class="icon icon-sites"></span></a>
+        <a href="<?php echo get_permalink( 36 ); ?>">
+          <div class="vbloc"><?php echo get_the_title( 36 ); ?></div>
+          <div class="vbloc"><span class="icon icon-sites"></span></div>
+        </a>
          <?php
           $qsn = wp_list_pages('title_li=&child_of=36&echo=0');
           if ($qsn) { ?>
@@ -79,10 +99,23 @@ $especes = array(
           <?php } ?>
       </li>
    		<li>
-        <a href="#">Espèces <span class="icon icon-especes"></span></a>
+        <a href="#">
+          <div class="vbloc">Espèces</div>
+          <div class="vbloc"><span class="icon icon-especes"></span></div>
+        </a>
         <?php if ( has_nav_menu( 'especes' ) ) {wp_nav_menu($especes); }; ?>
       </li>
-   		<li><a href="<?php echo site_url('/contact'); ?>">Contact <span class="icon icon-contact"></span></a></li>
-   		<li><a href="<?php echo site_url('/espace-client'); ?>">Espace client <span class="icon icon-espace-client"></span></a></li>
+   		<li>
+        <a href="<?php echo site_url('/contact'); ?>">
+          <div class="vbloc">Contact</div>
+          <div class="vbloc"><span class="icon icon-contact"></span></div>
+        </a>
+      </li>
+   		<li>
+        <a href="<?php echo site_url('/espace-client'); ?>">
+          <div class="vbloc">Espace client</div>
+          <div class="vbloc"><span class="icon icon-espace-client"></span></div>
+        </a>
+      </li>
    	</ul>
 </nav
