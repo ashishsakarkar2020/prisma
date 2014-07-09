@@ -13,4 +13,22 @@ function register_prisma_menus() {
     )
   );
 }
+
+function get_the_slug() {
+
+	  global $post;
+
+	  if ( is_single() || is_page() ) {
+	  return $post->post_name;
+	  }
+	  else {
+	  return "";
+	}
+
+}
+
+
 add_action( 'init', 'register_prisma_menus' );
+
+add_image_size( 'square', 300, 300 );
+add_image_size( 'actus', 600, 200 );

@@ -57,7 +57,7 @@
 .icon-contact:before {
 	content: "\e601";
 }
-.icon-cow:before {
+.icon-ruminants:before {
 	content: "\e602";
 }
 .icon-espace-client:before {
@@ -69,7 +69,7 @@
 .icon-factory:before {
 	content: "\e605";
 }
-.icon-fowl:before {
+.icon-volailles:before {
 	content: "\e606";
 }
 .icon-gear:before {
@@ -78,16 +78,16 @@
 .icon-heart:before {
 	content: "\e608";
 }
-.icon-horse:before {
+.icon-cheval:before {
 	content: "\e609";
 }
 .icon-map:before {
 	content: "\e60a";
 }
-.icon-pet:before {
+.icon-pet-food:before {
 	content: "\e60b";
 }
-.icon-pig:before {
+.icon-porc:before {
 	content: "\e60c";
 }
 .icon-pin:before {

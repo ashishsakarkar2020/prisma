@@ -63,8 +63,12 @@ wp_reset_postdata();
 
             <!-- the loop -->
             <?php while ( $query_actus->have_posts() ) : $query_actus->the_post(); ?>
-            <h2><?php the_title(); ?></h2>
+            <h2><?php the_title(); ?></h2>            
+            <?php // if ( has_post_thumbnail() ) { ?>
+               <?php the_post_thumbnail('thumbnail', array('class' => 'img-responsive')); ?>
+              <?php //   } ?>
             <?php the_excerpt() ; ?>
+            <a href="<?php the_permalink() ; ?>" class="btn btn-primary">lire la suite</a>
             <?php endwhile; ?>
             <!-- end of the loop -->
 
@@ -127,7 +131,7 @@ wp_reset_postdata();
     <?php the_content() ; ?>
 </section>
 
-<div class="nav-section" data-spy="affix" data-offset-top="120">
-    <a href="#" class="prev-section"><span class="glyphicon glyphicon-chevron-up"></span></a>
-    <a href="#" class="next-section"><span class="glyphicon glyphicon-chevron-down"></span></a>
+<div class="nav-section arrow" data-spy="affix" data-offset-top="120">
+    <a href="#" class="prev-section"><span class="icon icon-arrow-up"></span></a>
+    <a href="#" class="next-section"><span class="icon icon-arrow-down"></span></a>
 </div>

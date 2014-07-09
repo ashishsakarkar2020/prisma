@@ -1,7 +1,6 @@
 body {
 	border-top: 10px solid #29235c;
 	background: url('../img/bg.jpg') no-repeat top left;
-	font-family: 'advent', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .container {
@@ -16,6 +15,7 @@ body {
 	background: #fff;
 	border: 1px solid #eee;
 	position: relative;
+	z-index: 50;
 }
 
 .wrapper {
@@ -26,9 +26,18 @@ body {
 .mainheader {
 	height: 110px;
 	padding-top: 20px;
+	position: relative;
 }
 .brand {
 	display: block;
+}
+
+#login {
+	height: 50px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
 }
 
 .section {
@@ -41,33 +50,58 @@ body {
 	width: 50px;
 	position: absolute;
 	top: 0;
-	right: -60px;
+	right: -50px;
 }
 
 .nav-section.affix {
 	position: fixed;
 	top: 10px;
-	left: 970px;
+	left: 960px;
 
 }
 
-.nav-section a, .nav-count {
+.arrow a {
+	width: 50px;
 	height: 50px;
 	line-height: 50px;
 	background: #ccc;
 	text-align: center;
-}
-
-.nav-section a {
 	display: block;	
 	margin-bottom: 10px;
+	margin-left: 10px;
+	text-decoration: none;
+	z-index: 80;
+	float: left;
 }
 
-.nav-count {
-	width: 50px;
+/*Slider*/
+
+.slider-wrapper {
+	position: relative;
+}
+.nav-slider {
 	position: absolute;
-	top: 49px;
-	right: -71px;
+	bottom: 10px;
+	right: 10px;
+	z-index: 80;
+}
+
+.slick-slide {
+	position: relative;
+}
+
+.count {
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	display: block;	
+	text-decoration: none;
+	z-index: 200;
+	background: transparent;
 }
 
 .nav-footer li {
@@ -84,9 +118,9 @@ body {
 }
 
 .ombrage {
-	-moz-box-shadow: 0px 0px 8px 0px #ccc;
-	-webkit-box-shadow: 0px 0px 8px 0px #ccc;
-	-o-box-shadow: 0px 0px 8px 0px #ccc;
-	box-shadow: 0px 0px 8px 0px #ccc;
+	-moz-box-shadow: 0px 0px 4px 0px #000;
+	-webkit-box-shadow: 0px 0px 4px 0px #000;
+	-o-box-shadow: 0px 0px 4px 0px #000;
+	box-shadow: 0px 0px 4px 0px #000;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#ccc, Direction=NaN, Strength=10);
 }

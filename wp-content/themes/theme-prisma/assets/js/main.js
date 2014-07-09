@@ -40,6 +40,16 @@ var Roots = {
 
         $('ul.sf-menu').superfish();
 
+        $('.slider').slick({
+          arrows: false
+        });
+        $('.nav-slider .prev').click(function(){
+                $('.slider').slickPrev();
+        });
+        $('.nav-slider .next').click(function(){
+                $('.slider').slickNext();
+        });
+
     }
   },
   // Home page
@@ -58,8 +68,11 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on the contenu template page
     
-      $('.slider').slick();
+      
     }
+  },
+  single_services: {
+
   }
 };
 
