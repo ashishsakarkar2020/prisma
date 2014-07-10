@@ -1,0 +1,15 @@
+{
+  "dest": "assets/manifest.json",
+  "assets/css/main.min.css": {
+    "path": "assets/css/main.db4f.min.css",
+    "hash": "db4f"
+  },
+  "assets/css/styles.min.css": {
+    "path": "assets/css/styles.3e02.min.css",
+    "hash": "3e02"
+  },
+  "assets/js/scripts.min.js": {
+    "path": "assets/js/scripts.c987.min.js",
+    "hash": "c987"
+  }
+}

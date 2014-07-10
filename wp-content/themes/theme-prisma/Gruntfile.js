@@ -57,12 +57,17 @@ module.exports = function(grunt) {
       }
     },
     version: {
+      assets: {
       options: {
-        file: 'lib/scripts.php',
-        css: 'assets/css/main.min.css',
-        cssHandle: 'roots_main',
-        js: 'assets/js/scripts.min.js',
-        jsHandle: 'roots_scripts'
+          algorithm: 'sha1',
+          length: 4,
+          format: false,
+          rename: true,
+          manifest: 'assets/manifest.json',
+      },
+        files: {
+          'lib/scripts.php': ['assets/css/main.min.css', 'assets/css/styles.min.css', 'assets/js/scripts.min.js']
+        }
       }
     },
     watch: {
@@ -95,26 +100,56 @@ module.exports = function(grunt) {
     },
     clean: {
       dist: [
-        'assets/css/main.min.css',
-        'assets/js/scripts.min.js'
+        'assets/css/*.min.css',
+        'assets/temp/styles.css',
+        'assets/js/*.min.js'
       ]
+    },
+    bower: {
+      dev: {
+        dest: 'assets/',
+        js_dest: 'assets/js/plugins/',
+        css_dest: 'assets/css/plugins/',
+        options: {
+          ignorePackages: ['jquery']
+        }
+      },
+    },
+    concat: {
+      dist: {
+        src: ['bower_components/slick-carousel/slick/slick.css', 'assets/css/*.css', '!assets/css/*.min.css', '!assets/css/editor-style.css', '!assets/css/ie.css'],
+        dest: 'assets/temp/styles.css',
+      },
+    },
+    cssmin: {
+      files: {
+        src: 'assets/temp/styles.css',
+        dest: 'assets/css/styles.min.css'
+      }
     }
   });
 
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-bower');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-wp-assets');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
     'less',
+    'bower',
+    'concat',
+    'cssmin',
     'uglify',
     'version'
+
   ]);
   grunt.registerTask('dev', [
     'watch'
