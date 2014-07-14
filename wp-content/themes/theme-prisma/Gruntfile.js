@@ -117,7 +117,7 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['bower_components/slick-carousel/slick/slick.css', 'assets/css/*.css', '!assets/css/*.min.css', '!assets/css/editor-style.css', '!assets/css/ie.css'],
+        src: ['assets/css/*.css', '!assets/css/*.min.css', '!assets/css/editor-style.css', '!assets/css/ie.css', '!assets/css/prisma.css'],
         dest: 'assets/temp/styles.css',
       },
     },
