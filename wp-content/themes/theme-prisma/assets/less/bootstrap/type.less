@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6,
   .small {
     font-weight: normal;
     line-height: 1;
-    color: @headings-small-color;
+    color: inherit;
   }
 }
 
@@ -44,9 +44,9 @@ h6, .h6 {
   }
 }
 
-h1, .h1 { font-size: @font-size-h1; }
-h2, .h2 { font-size: @font-size-h2; }
-h3, .h3 { font-size: @font-size-h3; }
+h1, .h1 { font-size: @font-size-h1; text-transform: uppercase; }
+h2, .h2 { font-size: @font-size-h2; text-transform: uppercase;}
+h3, .h3 { font-size: @font-size-h3; text-transform: uppercase;}
 h4, .h4 { font-size: @font-size-h4; }
 h5, .h5 { font-size: @font-size-h5; }
 h6, .h6 { font-size: @font-size-h6; }
@@ -95,16 +95,16 @@ cite    { font-style: normal; }
   .text-emphasis-variant(@brand-primary);
 }
 .text-success {
-  .text-emphasis-variant(@state-success-text);
+  .text-emphasis-variant(@brand-success);
 }
 .text-info {
-  .text-emphasis-variant(@state-info-text);
+  .text-emphasis-variant(@brand-info);
 }
 .text-warning {
-  .text-emphasis-variant(@state-warning-text);
+  .text-emphasis-variant(@brand-warning);
 }
 .text-danger {
-  .text-emphasis-variant(@state-danger-text);
+  .text-emphasis-variant(@brand-danger);
 }
 
 // Contextual backgrounds
@@ -136,7 +136,7 @@ cite    { font-style: normal; }
 .page-header {
   padding-bottom: ((@line-height-computed / 2) - 1);
   margin: (@line-height-computed * 2) 0 @line-height-computed;
-  border-bottom: 1px solid @page-header-border-color;
+  border-bottom: 1px dashed @page-header-border-color;
 }
 
 
