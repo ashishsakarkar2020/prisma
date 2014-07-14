@@ -43,6 +43,14 @@ var Roots = {
         $('.slider').slick({
           arrows: false
         });
+
+        $('.carousel').slick({
+          arrows: true,
+          slidesToShow: 6,
+          centerMode: true,
+          centerPadding: "200px"
+        });
+
         $('.nav-slider .prev').click(function(){
                 $('.slider').slickPrev();
         });

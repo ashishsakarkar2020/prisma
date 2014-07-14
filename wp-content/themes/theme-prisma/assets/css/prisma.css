@@ -3,6 +3,7 @@ body {
 	background: url('../img/bg.jpg') no-repeat top left;
 }
 
+
 .container {
 	width: 780px; 
 	margin: 0;
@@ -16,6 +17,10 @@ body {
 	border: 1px solid #eee;
 	position: relative;
 	z-index: 50;
+}
+
+.hentry {
+	min-height: 400px;
 }
 
 .wrapper {
@@ -41,9 +46,9 @@ body {
 }
 
 .section {
-	min-height: 300px;
+	min-height: 350px;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .nav-section {
@@ -64,7 +69,7 @@ body {
 	width: 50px;
 	height: 50px;
 	line-height: 50px;
-	background: #ccc;
+	background: #29235c;
 	text-align: center;
 	display: block;	
 	margin-bottom: 10px;
@@ -72,9 +77,20 @@ body {
 	text-decoration: none;
 	z-index: 80;
 	float: left;
+	color: #fff;
+	font-size: 20px;
+}
+
+.content-info {
+	padding: 10px 0 60px 0;
+	background: url('../img/logo-prisma-footer.jpg') center bottom no-repeat;
 }
 
 /*Slider*/
+
+.slick-slider {
+	margin-bottom: 0;
+}
 
 .slider-wrapper {
 	position: relative;
@@ -102,15 +118,19 @@ body {
 	text-decoration: none;
 	z-index: 200;
 	background: transparent;
+	
 }
 
 .nav-footer li {
 	display: inline;
 }
 
-.acces {
-	background: #ccc;
-	padding: 10px;
+.acces a {
+	display: block;
+	height: 400px;
+	text-decoration: none;
+	padding: 20px;
+	word-wrap: break-word; 
 }
 
 .pageScrollerNav {
@@ -118,9 +138,113 @@ body {
 }
 
 .ombrage {
-	-moz-box-shadow: 0px 0px 4px 0px #000;
-	-webkit-box-shadow: 0px 0px 4px 0px #000;
-	-o-box-shadow: 0px 0px 4px 0px #000;
-	box-shadow: 0px 0px 4px 0px #000;
+	-moz-box-shadow: 0px 0px 8px 0px #555;
+	-webkit-box-shadow: 0px 0px 8px 0px #555;
+	-o-box-shadow: 0px 0px 4px 8px #555;
+	box-shadow: 0px 0px 8px 0px #555;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#ccc, Direction=NaN, Strength=10);
 }
+
+/*Searchform*/
+
+.search-form .input-group-addon  {
+	background: #fff;
+	border-left: 1px dashed #ccc;
+}
+
+/*Accueil*/
+
+.home .slider .slide {
+	min-height: 475px;
+	padding-top: 100px;
+	color: #29235c;
+}
+
+.home .slider .slide h1 {
+	margin: 0;
+}
+.home .slider .slide hr {
+	margin: 10px 0;
+	border-color: #29235c;
+}
+
+.home .actus {
+	padding: 0 40px;
+}
+
+.home .actus h3, .home .actus .page-header *{
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+.meta, .meta small {
+	color: #10a4e4;
+}
+
+.home section.services, .home section.produits {
+	background-size: 100%;
+	background-color: #eee;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 20px;
+
+}
+
+.home .section .nav {
+	padding: 10px;
+	margin-right: 20px;
+}
+.home .section .nav li a {
+	padding: 5px 1px;
+	color: #fff;
+	border-bottom: 1px dashed #fff;
+}
+
+.home .section .nav li:last-child a {
+	border-bottom: none;
+}
+
+.home .section .nav li a:hover, .home .section .nav li a:active, .home .section .nav li a:focus {
+	color: #29235c;
+	background: rgba(255,255,255,0.2);
+}
+
+.home section.especes {
+	background: #b0c01e url('../img/bg-especes.png') bottom center no-repeat;
+	padding-top: 40px;
+}
+
+.home section.especes h1, .home section.especes h2 {
+	margin: 0;
+}
+
+.home section.especes .carousel h2 {
+	margin-top: 0.5em;
+}
+
+.home section.especes .desc {
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 1px dashed #29235c;
+}
+
+.carousel .slide {
+	opacity:0.5;
+	transition:all 300ms ease;
+	margin-top: 50px;
+}
+
+.carousel .slick-center {
+	-moz-transform:scale(1.08);
+	-ms-transform:scale(1.08);
+	-o-transform:scale(1.08);
+	-webkit-transform:scale(1.08);
+	color:#29235c;
+	opacity:1;
+	transform:scale(1.3);
+}
+
+.carousel .slick-list {
+	height: 300px;
+}
+
