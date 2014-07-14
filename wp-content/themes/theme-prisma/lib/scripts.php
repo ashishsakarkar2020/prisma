@@ -13,10 +13,10 @@
 function roots_scripts() {
 
   
-  wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.40e6.min.css', false, true, all);
-  wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.c802.min.css', false, true, all);
+  wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.40e6.min.css', false, true, 'all');
+  wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.c802.min.css', false, true, 'all');
 
-  wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, true, all);
+  wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, true, 'all');
 
   wp_register_style('ie', get_template_directory_uri() . '/assets/css/ie.css', false, null);
 
