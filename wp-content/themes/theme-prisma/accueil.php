@@ -133,10 +133,10 @@ if( have_rows('slider') ):
 
                         <!-- the loop -->
                         <?php while ( $query_prisma->have_posts() ) : $query_prisma->the_post(); ?>
-                        <a href="<?php the_permalink() ; ?>" class="btn-info">
-                            <p class="text-center h1"><span class="icon icon-prisma"></span></p>
-                            <h2 class="h3 text-center"><?php the_title(); ?></h2>            
-                            <?php the_excerpt() ; ?>
+                        <a href="<?php the_permalink() ; ?>" class="btn-info text-center">
+                            <p class="h1"><span class="icon icon-prisma"></span></p>
+                            <h2 class="h3"><?php the_title(); ?></h2>            
+                            <p><?php if(get_field('sous_titre')) {the_field('sous_titre');} ?></p>
                         </a>
                         <?php endwhile; ?>
                         <!-- end of the loop -->
@@ -152,10 +152,10 @@ if( have_rows('slider') ):
 
                         <!-- the loop -->
                         <?php while ( $query_prisma->have_posts() ) : $query_prisma->the_post(); ?>
-                        <a href="<?php the_permalink() ; ?>" class="btn-warning">
-                            <p class="text-center h1"><span class="icon icon-users"></span></p>
-                            <h2 class="h3 text-center"><?php the_title(); ?></h2>            
-                            <?php the_excerpt() ; ?>
+                        <a href="<?php the_permalink() ; ?>" class="btn-warning text-center">
+                            <p class="h1"><span class="icon icon-users"></span></p>
+                            <h2 class="h3"><?php the_title(); ?></h2>            
+                            <p><?php if(get_field('sous_titre')) {the_field('sous_titre');} ?></p>
                         </a>
                         <?php endwhile; ?>
                         <!-- end of the loop -->
@@ -171,10 +171,10 @@ if( have_rows('slider') ):
 
                         <!-- the loop -->
                         <?php while ( $query_prisma->have_posts() ) : $query_prisma->the_post(); ?>
-                        <a href="<?php the_permalink() ; ?>" class="btn-primary">
-                            <p class="text-center h1"><span class="icon icon-factory"></span></p>
-                            <h2 class="h3 text-center"><?php the_title(); ?></h2>            
-                            <?php the_excerpt() ; ?>
+                        <a href="<?php the_permalink() ; ?>" class="btn-primary text-center">
+                            <p class="h1"><span class="icon icon-factory"></span></p>
+                            <h2 class="h3"><?php the_title(); ?></h2>            
+                            <p><?php if(get_field('sous_titre')) {the_field('sous_titre');} ?></p>
 
                         </a>
                         <?php endwhile; ?>
@@ -191,10 +191,10 @@ if( have_rows('slider') ):
 
                         <!-- the loop -->
                         <?php while ( $query_prisma->have_posts() ) : $query_prisma->the_post(); ?>
-                        <a href="<?php the_permalink() ; ?>" class="btn-success">
-                            <p class="text-center h1"><span class="icon icon-retd"></span></p>
-                            <h2 class="h3 text-center"><?php the_title(); ?></h2>            
-                            <?php the_excerpt() ; ?>
+                        <a href="<?php the_permalink() ; ?>" class="btn-success text-center">
+                            <p class="h1"><span class="icon icon-retd"></span></p>
+                            <h2 class="h3"><?php the_title(); ?></h2>            
+                            <p><?php if(get_field('sous_titre')) {the_field('sous_titre');} ?></p>
                         </a>
                         <?php endwhile; ?>
                         <!-- end of the loop -->

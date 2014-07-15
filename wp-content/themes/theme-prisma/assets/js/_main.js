@@ -44,6 +44,10 @@ var Roots = {
           arrows: false
         });
 
+        $('.slider-arrow').slick({
+          arrows: true
+        });
+
         $('.carousel').slick({
           arrows: true,
           slidesToShow: 6,
@@ -72,10 +76,12 @@ var Roots = {
       // JavaScript to be fired on the about us page
     }
   },
-  page_template_page_contenu_php: {
+  page_template_page_institutionnelle_php: {
     init: function() {
       // JavaScript to be fired on the contenu template page
-    
+    $('.slider').slick({
+          arrows: true
+        });
       
     }
   },

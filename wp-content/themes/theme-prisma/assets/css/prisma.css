@@ -23,6 +23,10 @@ body {
 	min-height: 400px;
 }
 
+.home .hentry {
+	min-height: 200px;
+}
+
 .wrapper {
 	padding: 10px;
 	position: relative;
@@ -46,9 +50,9 @@ body {
 }
 
 .section {
-	min-height: 350px;
 	position: relative;
 	margin-bottom: 10px;
+	min-height: 300px;
 }
 
 .nav-section {
@@ -127,10 +131,14 @@ body {
 
 .acces a {
 	display: block;
-	height: 400px;
+	height: 380px;
 	text-decoration: none;
 	padding: 20px;
 	word-wrap: break-word; 
+}
+
+.acces .h1 {
+	font-size: 60px;
 }
 
 .pageScrollerNav {
@@ -170,6 +178,7 @@ body {
 
 .home .actus {
 	padding: 0 40px;
+	background: url('../img/bg-actus.png') top left no-repeat;
 }
 
 .home .actus h3, .home .actus .page-header *{
@@ -248,3 +257,10 @@ body {
 	height: 300px;
 }
 
+/*Gabarit institutionel
+*/
+
+section.liste {
+	font-size: 1.5em;
+	font-family: 'advent-light';
+}
