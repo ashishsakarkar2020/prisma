@@ -4,12 +4,12 @@
     "path": "assets/css/main.40e6.min.css",
     "hash": "40e6"
   },
-  "assets/css/styles.min.css": {
-    "path": "assets/css/styles.7fd2.min.css",
-    "hash": "7fd2"
+  "assets/css/plugins.min.css": {
+    "path": "assets/css/plugins.5784.min.css",
+    "hash": "5784"
   },
   "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.84a6.min.js",
-    "hash": "84a6"
+    "path": "assets/js/scripts.63f0.min.js",
+    "hash": "63f0"
   }
 }

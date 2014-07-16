@@ -66,7 +66,7 @@ module.exports = function(grunt) {
           manifest: 'assets/manifest.json',
       },
         files: {
-          'lib/scripts.php': ['assets/css/main.min.css', 'assets/css/styles.min.css', 'assets/js/scripts.min.js']
+          'lib/scripts.php': ['assets/css/main.min.css', 'assets/css/plugins.min.css', 'assets/js/scripts.min.js']
         }
       }
     },
@@ -109,22 +109,26 @@ module.exports = function(grunt) {
       dev: {
         dest: 'assets/',
         js_dest: 'assets/js/plugins/',
-        css_dest: 'assets/css/plugins/',
+        css_dest: 'assets/css/',
         options: {
           ignorePackages: ['jquery']
         }
       },
     },
     concat: {
-      dist: {
-        src: ['assets/css/*.css', '!assets/css/*.min.css', '!assets/css/editor-style.css', '!assets/css/ie.css', '!assets/css/prisma.css'],
-        dest: 'assets/temp/styles.css',
+      theme: {
+        src: ['assets/css/fonts.css', 'assets/css/navigation.css'],
+        dest: 'assets/css/theme.css',
+      },
+      plugins: {
+        src: ['assets/css/plugins/*.css'],
+        dest: 'assets/css/plugins.css',
       },
     },
     cssmin: {
       files: {
-        src: 'assets/temp/styles.css',
-        dest: 'assets/css/styles.min.css'
+        src: 'assets/css/plugins.css',
+        dest: 'assets/css/plugins.min.css'
       }
     }
   });
@@ -144,7 +148,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'clean',
     'less',
-    'bower',
     'concat',
     'cssmin',
     'uglify',
