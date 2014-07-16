@@ -20,11 +20,11 @@
 
         </div><!-- /slider -->
 
-        <div class="arrow nav-slider text-right">
+        <!-- <div class="arrow nav-slider text-right">
           <a href="#" class="prev"><span class="icon icon-arrow-left"></span></a>
           <a>&nbsp; / <?php echo $nbre; ?></a>
           <a href="#" class="next bloc"><span class="icon icon-arrow-right"></span></a>
-        </div><!-- /nav wrapper -->
+        </div> --><!-- /nav wrapper -->
 
       </div><!-- /slider wrapper -->
       <?php endif; ?>

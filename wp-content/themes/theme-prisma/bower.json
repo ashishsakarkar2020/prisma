@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "devDependencies": {
     "superfish": "latest",
-    "slick-carousel" : "latest"
+    "slick-carousel": "latest",
+    "owl.carousel": "*"
   }
 }

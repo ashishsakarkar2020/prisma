@@ -40,26 +40,27 @@ var Roots = {
 
         $('ul.sf-menu').superfish();
 
-        $('.slider').slick({
-          arrows: false
+        $('.slider').owlCarousel({
+          items:1,
+          dots:false,
+          autoHeight:true
         });
 
-        $('.slider-arrow').slick({
-          arrows: true
+        $('.slider-arrow').owlCarousel({
+          nav:true,
+          items:1,
+          dots:false
         });
 
-        $('.carousel').slick({
-          arrows: true,
-          slidesToShow: 6,
-          centerMode: true,
-          centerPadding: "200px"
-        });
-
-        $('.nav-slider .prev').click(function(){
-                $('.slider').slickPrev();
-        });
-        $('.nav-slider .next').click(function(){
-                $('.slider').slickNext();
+        $('.carousel').owlCarousel({
+          loop:true,
+          items:5,
+          center:true,
+          margin:10,
+          dots:false,
+          stagePadding: 50,
+          nav:true,
+          navText:[,]
         });
 
     }

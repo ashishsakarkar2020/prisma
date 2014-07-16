@@ -49,15 +49,16 @@ if( have_rows('slider') ):
     
 ?>
 
-    <div id="slider" class="slider">
+    <div class="slider">
 
     <?php     // loop through the rows of data
     while ( have_rows('slider') ) : the_row(); ?>
         
      
         <?php if( get_row_layout() == 'slide' ):?>
-            <div class="slide" style="background-image: url('<?php the_sub_field('image'); ?>')">
-                <div class="row">
+            <div class="slide">
+                <img src="<?php the_sub_field('image'); ?>" class="img-responsive" />
+                <div class="row slide-caption">
                     <div class="col-xs-4 col-xs-offset-7">
                         <h1><?php the_sub_field('titre'); ?></h1>
                         <hr>
@@ -314,7 +315,7 @@ if( have_rows('especes') ):
 
             </div>
 
-            <div id="slider-especes" class="carousel">
+            <div id="slider-especes" class="owl-carousel carousel">
 
                 <?php $query_especes = new WP_Query( $especes ); ?>
 
@@ -339,8 +340,8 @@ if( have_rows('especes') ):
                 <?php endwhile; ?>
                 <!-- end of the loop -->
 
-            <?php wp_reset_postdata(); ?>
-
+                <?php wp_reset_postdata(); ?>
+           
             </div>
 
             
