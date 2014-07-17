@@ -219,29 +219,35 @@ if( have_rows('services') ):
 
     <?php     // loop through the rows of data
     while ( have_rows('services') ) : the_row(); ?>
-        
-        
-     
-        <?php if( get_row_layout() == 'intro' ):?>
-        <section class="section services" style="background-image: url('<?php the_sub_field('image'); ?>')">
-            
-                <div class="row">
-                    <div class="col-xs-6 col-xs-offset-1 text-right">
-                        <h1 class="text-primary"><span class="icon icon-gear"></span> services</h1>
-                        <h2><?php the_sub_field('sous_titre'); ?></h2>     
-                        <p><?php the_sub_field('description'); ?></p>
-                    </div>
+              
+        <?php if( get_row_layout() == 'intro' ): 
+            $bg = 'bg-info';
+        ?>
+        <section class="section">
+                
+                <?php if ( get_sub_field('image') ): 
+                    $bg = 'slide-caption';
+                ?>
+                    <img src="<?php the_sub_field('image'); ?>" class="img-responsive">
+                <?php endif; ?>
+                
+                <div class="wrapper <?php echo $bg; ?>">
+                    <div class="row">
+                        <div class="col-xs-6 col-xs-offset-1 text-right">
+                            <h1 class=""><span class="icon icon-gear"></span> services</h1>
+                            <h2><?php the_sub_field('sous_titre'); ?></h2>     
+                            <p><?php the_sub_field('description'); ?></p>
+                        </div>
 
-                    <div class="col-xs-offset-1 col-xs-4">
-                    <?php if ( has_nav_menu( 'services' ) ) {wp_nav_menu($services); }; ?>
+                        <div class="col-xs-offset-1 col-xs-4">
+                        <?php if ( has_nav_menu( 'services' ) ) {wp_nav_menu($services); }; ?>
+                        </div>
                     </div>
                 </div>
-
-    </section>
+        </section>
      
         <?php endif; ?>
     
-
     <?php endwhile; ?>
         
 <?php endif; ?>
@@ -258,24 +264,32 @@ if( have_rows('produits') ):
 
     <?php     // loop through the rows of data
     while ( have_rows('produits') ) : the_row(); ?>
-        
-        
-     
-        <?php if( get_row_layout() == 'intro' ):?>
-        <section class="section produits" class="section services" style="background-image: url('<?php the_sub_field('image'); ?>')">
-            
-            <div class="row">
-                <div class="col-xs-6 col-xs-offset-1 text-right">
-                <h1><span class="icon icon-produits"></span> produits</h1>
-                <h2><?php the_sub_field('sous_titre'); ?></h2>     
-                <p><?php the_sub_field('description'); ?></p>
-            </div>
 
-            <div class="col-xs-offset-1 col-xs-4">
-            <?php if ( has_nav_menu( 'produits' ) ) {wp_nav_menu($produits); }; ?>
-            </div>
-        </div>
-    </section>
+        <?php if( get_row_layout() == 'intro' ): 
+            $bg = 'bg-primary';
+        ?>
+        <section class="section">
+                
+                <?php if ( get_sub_field('image') ): 
+                    $bg = 'slide-caption';
+                ?>
+                    <img src="<?php the_sub_field('image'); ?>" class="img-responsive">
+                <?php endif; ?>
+                
+                <div class="wrapper <?php echo $bg; ?>">
+                    <div class="row">
+                        <div class="col-xs-6 col-xs-offset-1 text-right">
+                            <h1 class=""><span class="icon icon-produits"></span> produits</h1>
+                            <h2><?php the_sub_field('sous_titre'); ?></h2>     
+                            <p><?php the_sub_field('description'); ?></p>
+                        </div>
+
+                        <div class="col-xs-offset-1 col-xs-4">
+                        <?php if ( has_nav_menu( 'produits' ) ) {wp_nav_menu($produits); }; ?>
+                        </div>
+                    </div>
+                </div>
+        </section>
      
         <?php endif; ?>
     
