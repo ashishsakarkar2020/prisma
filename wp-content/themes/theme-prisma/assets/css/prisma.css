@@ -61,7 +61,10 @@ body {
 .section {
 	position: relative;
 	margin-bottom: 10px;
-	min-height: 300px;
+}
+
+.section .wrapper {
+	min-height: 350px;
 }
 
 .nav-section {
@@ -79,19 +82,20 @@ body {
 }
 
 .arrow a {
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
+	width: auto;
+	height: auto;
+	padding: 10px;
 	background: #29235c;
 	text-align: center;
 	display: block;	
-	margin-bottom: 10px;
 	margin-left: 10px;
 	text-decoration: none;
-	z-index: 80;
 	float: left;
 	color: #fff;
-	font-size: 20px;
+}
+
+.nav-section.arrow a {
+	margin-bottom: 10px;
 }
 
 .content-info {
@@ -109,7 +113,9 @@ body {
 .slide-caption {
 	position: absolute;
 	width: 100%;
+	min-height: 200px;
 	top: 0;
+	left: 0;
 }
 
 .slick-slider {
@@ -173,6 +179,10 @@ body {
 	border: 1px solid #ccc;
 }
 
+.subtitle {
+	margin: 0;
+}
+
 /*Searchform*/
 
 .search-form .input-group-addon  {
@@ -185,7 +195,16 @@ body {
 
 .breadcrumb {
 	position: absolute;
-	top: 0;
+	top: -6px;
+	width: auto;
+}
+
+.breadcrumb a {
+	color: #fff;
+}
+
+.breadcrumb li.active {
+	font-family: 'advent-bold';
 }
 
 /*Accueil*/
@@ -221,14 +240,7 @@ body {
 	color: #10a4e4;
 }
 
-.home section.services, .home section.produits {
-	background-size: 100%;
-	background-color: #eee;
-	background-repeat: no-repeat;
-	color: #fff;
-	padding: 20px;
 
-}
 
 .home .section .nav {
 	padding: 10px;

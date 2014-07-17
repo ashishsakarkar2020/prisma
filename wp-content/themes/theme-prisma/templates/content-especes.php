@@ -1,20 +1,8 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class('row'); ?>>
     
-      <?php $images = get_field('slider'); 
-      if( $images ): ?>
-
-        <div id="slider" class="slider">
-
-          <?php foreach( $images as $image ): ?>
-              <div>
-                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
-              </div>
-          <?php endforeach; ?>
-
-        </div>
+      <?php get_template_part('templates/slider'); ?>
     
-      <?php endif; ?>
       <header class="col-xs-10 col-xs-offset-1">
         <h1 class="entry-title"><span class="icon icon-<?php echo get_the_slug();?>"></span> <?php the_title(); ?></h1>
         <h2>espèces</h2>

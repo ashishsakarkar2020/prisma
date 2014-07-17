@@ -3,7 +3,7 @@
  * Enqueue scripts and stylesheets
  *
  * Enqueue stylesheets in the following order:
- * 1. /theme/assets/css/main.abf2.min.css
+ * 1. /theme/assets/css/main.1630.min.css
  *
  * Enqueue scripts in the following order:
  * 1. jquery-1.11.0.min.js via Google CDN
@@ -13,7 +13,7 @@
 function roots_scripts() {
 
   
-  wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.abf2.min.css', false, true, 'all');
+  wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.1630.min.css', false, true, 'all');
   wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, true, 'all');
   wp_enqueue_style('theme', get_template_directory_uri() . '/assets/css/theme.css', false, true, 'all');
   wp_enqueue_style('plugins', get_template_directory_uri() . '/assets/css/plugins.3fc1.min.css', false, true, 'all');
@@ -32,7 +32,7 @@ function roots_scripts() {
   }
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.a45f.min.js', array(), null, true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.9af6.min.js', array(), null, true);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');

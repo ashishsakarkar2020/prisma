@@ -38,19 +38,13 @@ var Roots = {
             pageScroller.next();
         });
 
-        $('ul.sf-menu').superfish();
+        $('ul.sf-menu').superfish();   
 
-        $('.slider').owlCarousel({
-          items:1,
-          dots:false,
-          autoHeight:true
-        });
-
-        $('.slider-arrow').owlCarousel({
-          nav:true,
-          items:1,
-          dots:false
-        });
+    }
+  },
+  // Home page
+  home: {
+    init: function() {
 
         $('.carousel').owlCarousel({
           loop:true,
@@ -62,19 +56,63 @@ var Roots = {
           nav:true,
           navText:[,]
         });
+    }
+  },
+  // single page
+  single: {
+    init: function() {
+      // slider
 
+        $(".slider").on('initialized.owl.carousel', function(event) {
+          var items = event.item.count;
+          var item = event.item.index;
+          updateResult(".owlItem", item);
+          updateResult(".owlItems", items);
+        })
+
+        $('.slider').owlCarousel({
+          items:1,
+          dots:false,
+          autoHeight:true,
+          loop:true,
+        });
+      
+        $(".nav-slider .next").click(function(){
+          $('.slider').trigger('next.owl.carousel');
+        })
+
+        $(".nav-slider .prev").click(function(){
+          $('.slider').trigger('prev.owl.carousel');
+        })
+
+        function updateResult(pos, value){
+          $(".nav-slider").find(pos).text(value);
+        }
+        
+        $(".slider").on('translated.owl.carousel', function(event) {
+          var items = event.item.count;
+          var item = event.item.index;
+          updateResult(".owlItem", item);
+          updateResult(".owlItems", items);
+        })
     }
   },
-  // Home page
-  home: {
+  // single page
+  page: {
     init: function() {
-      // JavaScript to be fired on the home page
-    }
-  },
-  // About us page, note the change from about-us to about_us.
-  about_us: {
-    init: function() {
-      // JavaScript to be fired on the about us page
+      // slider
+
+       
+
+        $('.slider').owlCarousel({
+          items:1,
+          dots:false,
+          autoHeight:true,
+          loop:true,
+          nav: false,
+        });
+      
+        
     }
   },
   page_template_page_institutionnelle_php: {
@@ -85,9 +123,6 @@ var Roots = {
         });
       
     }
-  },
-  single_services: {
-
   }
 };
 
