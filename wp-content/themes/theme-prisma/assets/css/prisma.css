@@ -14,7 +14,6 @@ body {
 
 .main {
 	background: #fff;
-	border: 1px solid #eee;
 	position: relative;
 	z-index: 50;
 }
@@ -42,11 +41,21 @@ body {
 }
 
 #login {
-	height: 50px;
+	height: auto;
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	overflow: hidden;
 	z-index: 10;
+	padding-left: 10px;
+	
+}
+
+#login .btn {
+	border-bottom: 5px solid #29235c;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 10px;
 }
 
 .section {
@@ -157,10 +166,11 @@ body {
 }
 
 .ombrage {
-	-moz-box-shadow: 0px 0px 8px 0px #555;
-	-webkit-box-shadow: 0px 0px 8px 0px #555;
-	-o-box-shadow: 0px 0px 8px 0px #555;
-	box-shadow: 0px 0px 8px 0px #555;
+	-moz-box-shadow: 0px 0px 4px 0px #999;
+	-webkit-box-shadow: 0px 0px 4px 0px #999;
+	-o-box-shadow: 0px 0px 4px 0px #999;
+	box-shadow: 0px 0px 4px 0px #999;
+	border: 1px solid #ccc;
 }
 
 /*Searchform*/
@@ -284,4 +294,39 @@ body {
 section.liste {
 	font-size: 1.5em;
 	font-family: 'advent-light';
+}
+
+/*Sidebar*/
+
+.sidebar .wrapper {
+	padding: 10px 0 0 10px;
+}
+
+.sidebar .widget {
+	margin-bottom: 10px;
+}
+
+.widget-title {
+
+	margin: 0;
+	text-align: center;
+	padding: 10px;
+	border-bottom: 5px solid #29235c;
+
+}
+
+.themes .widget-title {
+	border-color: #333;
+}
+
+.sidebar .archives .nav li {
+	border-bottom: solid 2px #ddd;
+}
+
+.sidebar .themes .nav li {
+	border-bottom: dotted 2px #ddd;
+}
+
+.sidebar .nav li:last-child {
+	border: none;
 }

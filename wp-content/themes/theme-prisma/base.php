@@ -13,7 +13,7 @@
 
       <?php get_template_part('templates/navigation'); ?>
 
-    <div class="content">
+    <div class="content row">
 
       <?php
         do_action('get_header');
@@ -21,12 +21,20 @@
           get_template_part('templates/header');
       ?>
 
-      <main class="main wrapper ombrage" role="main">
+      <main class="main wrapper ombrage <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
         <?php get_search_form(); ?>
       </main><!-- /.main -->
 
-      <?php get_template_part('templates/footer'); ?>
+      <?php if (roots_display_sidebar()) : ?>
+        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+          <?php include roots_sidebar_path(); ?>
+        </aside><!-- /.sidebar -->
+      <?php endif; ?>
+
+      <div class="col-xs-12">
+        <?php get_template_part('templates/footer'); ?>
+      </div>
     
     </div><!-- /.content -->
 

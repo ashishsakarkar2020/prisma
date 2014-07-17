@@ -1,15 +1,15 @@
 {
   "dest": "assets/manifest.json",
   "assets/css/main.min.css": {
-    "path": "assets/css/main.40e6.min.css",
-    "hash": "40e6"
+    "path": "assets/css/main.abf2.min.css",
+    "hash": "abf2"
   },
   "assets/css/plugins.min.css": {
-    "path": "assets/css/plugins.5784.min.css",
-    "hash": "5784"
+    "path": "assets/css/plugins.3fc1.min.css",
+    "hash": "3fc1"
   },
   "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.63f0.min.js",
-    "hash": "63f0"
+    "path": "assets/js/scripts.a45f.min.js",
+    "hash": "a45f"
   }
 }
