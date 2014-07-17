@@ -8,7 +8,9 @@
   margin-bottom: @line-height-computed;
   list-style: none;
   background-color: @breadcrumb-bg;
-  border-radius: @border-radius-base;
+  border-radius: @border-radius-large;
+  text-transform: uppercase;
+  font-size : 0.8em;
 
   > li {
     display: inline-block;
@@ -22,5 +24,6 @@
 
   > .active {
     color: @breadcrumb-active-color;
+    font-weight: bold;
   }
 }

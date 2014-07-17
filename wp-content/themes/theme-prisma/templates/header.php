@@ -5,7 +5,5 @@
 		<a  href="<?php echo wp_login_url(); ?>" class="btn btn-success btn-block"><span>Espace client</span><br><small>identification</small></a>
 	</div>
 	
-	<?php if ( function_exists('yoast_breadcrumb') ) {
-yoast_breadcrumb('<p class="breadcrumb text-left">','</p>');
-} ?>
+	<?php dimox_breadcrumbs(); ?>
 </header>
