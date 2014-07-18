@@ -97,6 +97,24 @@ var Roots = {
         })
     }
   },
+
+  // Home page
+  single_especes: {
+    init: function() {
+
+        $('.carousel').owlCarousel({
+          loop:true,
+          items:3,
+          center:true,
+          margin:10,
+          dots:false,
+          stagePadding: 100,
+          nav:true,
+          navText:[,]
+        });
+    }
+  },
+
   // single page
   page: {
     init: function() {

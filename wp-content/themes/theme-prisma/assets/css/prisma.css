@@ -67,10 +67,26 @@ body {
 	min-height: 350px;
 }
 
+.section-header {
+	border-bottom: 10px solid #ccc;
+}
+
+.section-footer {
+	padding-top: 10px;
+	border-bottom: dashed 1px #333;
+	margin-bottom: 10px;
+}
+
+/*Navigation section */
+
+.pageScrollerNav {
+	display: none;
+}
+
 .nav-section {
 	width: 50px;
 	position: absolute;
-	top: 0;
+	top: 110px;
 	right: -50px;
 }
 
@@ -83,9 +99,10 @@ body {
 
 .arrow a {
 	width: auto;
+	min-width: 40px;
 	height: auto;
 	padding: 10px;
-	background: #29235c;
+	background: #10a4e4;
 	text-align: center;
 	display: block;	
 	margin-left: 10px;
@@ -96,7 +113,10 @@ body {
 
 .nav-section.arrow a {
 	margin-bottom: 10px;
+	background: #29235c;
 }
+
+/*Footer*/
 
 .content-info {
 	padding: 10px 0 60px 0;
@@ -116,6 +136,7 @@ body {
 	min-height: 200px;
 	top: 0;
 	left: 0;
+	z-index: 800;
 }
 
 .slick-slider {
@@ -165,10 +186,6 @@ body {
 
 .acces .h1 {
 	font-size: 60px;
-}
-
-.pageScrollerNav {
-	display: none;
 }
 
 .ombrage {
@@ -240,41 +257,44 @@ body {
 	color: #10a4e4;
 }
 
+/*Navigation services & produits page d'accueil */
 
-
-.home .section .nav {
+.section .nav {
 	padding: 10px;
 	margin-right: 20px;
 }
-.home .section .nav li a {
+.section .nav li a {
 	padding: 5px 1px;
 	color: #fff;
 	border-bottom: 1px dashed #fff;
 }
 
-.home .section .nav li:last-child a {
+.section .nav li:last-child a {
 	border-bottom: none;
 }
 
-.home .section .nav li a:hover, .home .section .nav li a:active, .home .section .nav li a:focus {
+.section .nav li a:hover, .section .nav li a:active, .section .nav li a:focus {
 	color: #29235c;
 	background: rgba(255,255,255,0.2);
 }
 
-.home section.especes {
+/*Carousel*/
+
+.section-carousel {
 	background: #b0c01e url('../img/bg-especes.png') bottom center no-repeat;
+	color: #fff;
 	padding-top: 40px;
 }
 
-.home section.especes h1, .home section.especes h2 {
+.section-carousel h1, .section-carousel h2 {
 	margin: 0;
 }
 
-.home section.especes .carousel h2 {
+.section-carousel .carousel h2 {
 	margin-top: 0.5em;
 }
 
-.home section.especes .desc {
+.section-carousel .desc {
 	margin-left: 20px;
 	padding-left: 20px;
 	border-left: 1px dashed #29235c;
@@ -308,6 +328,12 @@ section.liste {
 	font-family: 'advent-light';
 }
 
+/*Contact*/
+
+.contact {
+	border-top: 10px solid #10a4e4;
+}
+
 /*Sidebar*/
 
 .sidebar .wrapper {
@@ -316,6 +342,7 @@ section.liste {
 
 .sidebar .widget {
 	margin-bottom: 10px;
+	background: #fff;
 }
 
 .widget-title {
