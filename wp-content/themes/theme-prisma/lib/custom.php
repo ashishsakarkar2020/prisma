@@ -37,6 +37,15 @@ add_action( 'init', 'register_prisma_menus' );
 add_image_size( 'square', 300, 300, true );
 add_image_size( 'actus', 600, 200, true );
 
+// Change Posts name
+
+function edit_admin_menus() {
+    global $menu;
+  
+  $menu[5][0] = 'Actualités'; 
+}
+add_action( 'admin_menu', 'edit_admin_menus' );
+
 
 // ajout du champs extrait sur les pages
 
