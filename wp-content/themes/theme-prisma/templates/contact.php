@@ -1,9 +1,23 @@
+<aside class="section contact">
 <?php $contact = new WP_Query( 'pagename=contact' ); ?>
 
-<!-- the loop -->
-  <?php while ( $contact->have_posts() ) : $contact->the_post(); ?>
-    <h2><?php the_title(); ?></h2>
-  <?php endwhile; ?>
-<!-- end of the loop -->
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1">
 
-<?php wp_reset_postdata(); ?>
+	<!-- the loop -->
+	  <?php while ( $contact->have_posts() ) : $contact->the_post(); ?>
+	    <h1 class="text-info"><span class="icon icon-contact"></span> <?php the_title(); ?></h1>
+	  <?php endwhile; ?>
+	<!-- end of the loop -->
+
+	<?php wp_reset_postdata(); ?>
+
+	<?php
+	if ( function_exists( 'ninja_forms_display_form' ) ) {
+	  ninja_forms_display_form( 1 );
+	} ?>
+
+		</div>
+	</div>
+
+</aside>
