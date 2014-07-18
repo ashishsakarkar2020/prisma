@@ -1,6 +1,6 @@
 <?php $images = get_field('slider');
   if( $images ): ?>
-  <div class="slider-wrapper">
+  <div class="slider-wrapper section">
     <div class="slider">
   
       <?php foreach( $images as $image ):?>

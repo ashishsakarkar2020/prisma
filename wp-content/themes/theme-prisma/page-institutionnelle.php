@@ -150,11 +150,6 @@ if( have_rows('sections') ):
     
 
     <?php endwhile; ?>
-
-    <div class="nav-section arrow" data-spy="affix" data-offset-top="120">
-	    <a href="#" class="prev-section"><span class="icon icon-arrow-up"></span></a>
-	    <a href="#" class="next-section"><span class="icon icon-arrow-down"></span></a>
-	</div>
         
 <?php endif; ?>
 

@@ -9,7 +9,7 @@
         <h2 class="subtitle h3">services</h2>
       </header>
 
-      <div class="entry-content col-xs-10 col-xs-offset-1">
+      <div class="entry-content col-xs-10 col-xs-offset-1 section">
 
         <?php if(get_field('chapo')) { ?>
           <p class="lead"><?php the_field('chapo'); ?></p>
