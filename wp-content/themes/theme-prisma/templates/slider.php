@@ -13,7 +13,7 @@
 
     </div><!-- /slider -->
 
-    <?php if(is_single()): ?>
+    <?php if(is_single() && count($images) != 1) : ?>
 
 	    <div class="arrow nav-slider text-right">
 	      <a href="#" class="prev"><span class="icon icon-arrow-left"></span></a>

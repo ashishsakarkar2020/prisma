@@ -3,7 +3,6 @@ body {
 	background: url('../img/bg.jpg') no-repeat top left;
 }
 
-
 .container {
 	width: 780px; 
 	margin: 0;
@@ -20,6 +19,11 @@ body {
 
 .hentry {
 	min-height: 400px;
+}
+
+.hentry h3 {
+	color: #29235c;
+	text-transform: none;
 }
 
 .home .hentry {
@@ -306,7 +310,7 @@ body {
 	margin-top: 50px;
 }
 
-.carousel .center {
+.carousel .center .slide {
 	-moz-transform:scale(1.08);
 	-ms-transform:scale(1.08);
 	-o-transform:scale(1.08);
