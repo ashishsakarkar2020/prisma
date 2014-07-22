@@ -1,5 +1,8 @@
 <?php
 
+ $category = get_the_category();
+
+
 $args_archives = array(
 	'type'            => 'monthly',
 	'limit'           => '',
@@ -8,7 +11,7 @@ $args_archives = array(
 	'after'           => '',
 	'show_post_count' => false,
 	'echo'            => 1,
-	'order'           => 'DESC'
+	'order'           => 'DESC',
 );
 
 $args_categories = array(
@@ -21,9 +24,8 @@ $args_categories = array(
 	'title_li'           => '',
 	'echo'               => 1,
 	'depth'              => 1,
-	'current_category'   => 0,
-	'taxonomy'           => 'category',
-	'walker'             => null
+	'current_category'   => $category->cat_ID,
+	'taxonomy'           => 'category'
 ); 
 
 ?>

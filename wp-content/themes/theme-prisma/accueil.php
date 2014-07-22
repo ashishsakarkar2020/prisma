@@ -85,7 +85,7 @@ if( have_rows('slider') ):
         <!-- Actus-->
 
         <div class="col-xs-6">
-            <div class="actus">
+            <div class="actualites">
                 <?php 
                     $query_actus = new WP_Query( $actus );
                     $a = 0;
@@ -104,7 +104,7 @@ if( have_rows('slider') ):
                 <article <?php post_class(); ?>>
 
                     <header class="page-header">
-                        <p class="h3 meta">14/07/14 | <small>theme</small></p>
+                        <?php get_template_part('templates/entry-meta'); ?>
                         <h2 class="h3"><?php the_title(); ?></h2>
                     </header>  
 

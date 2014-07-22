@@ -247,18 +247,36 @@ body {
 	border-color: #29235c;
 }
 
-.home .actus {
+.home .actualites {
 	padding: 0 40px;
 	background: url('../img/bg-actus.png') top left no-repeat;
 }
 
-.home .actus h3, .home .actus .page-header *{
+.home .actualites h3, .home .actualites .page-header *{
 	margin: 0;
 	margin-bottom: 4px;
 }
 
+/*Actus Meta*/
+
+.meta {
+	text-transform: none;
+}
+
 .meta, .meta small {
 	color: #10a4e4;
+}
+
+.meta .zoom-sur {
+	color: #e52d3e;
+}
+
+.meta .produits {
+	color: #29235c;
+}
+
+.meta .evenements {
+	color: #b0c01e;
 }
 
 /*Navigation services & produits page d'accueil */
@@ -369,6 +387,20 @@ section.liste {
 .sidebar .themes .nav li {
 	border-bottom: dotted 2px #ddd;
 }
+
+.sidebar .themes .nav li a:hover, .sidebar .themes .nav li.current-cat a {
+	border-left: solid 4px #10a4e4;
+}
+.sidebar .themes .nav li.cat-item-11 a:hover, .sidebar .themes .nav li.cat-item-11.current-cat a {
+	border-left: solid 4px #b0c01e;
+}
+.sidebar .themes .nav li.cat-item-6 a:hover, .sidebar .themes .nav li.cat-item-6.current-cat a {
+	border-left: solid 4px #29235c;
+}
+.sidebar .themes .nav li.cat-item-10 a:hover, .sidebar .themes .nav li.cat-item-10.current-cat a {
+	border-left: solid 4px #e52d3e;
+}
+
 
 .sidebar .nav li:last-child {
 	border: none;

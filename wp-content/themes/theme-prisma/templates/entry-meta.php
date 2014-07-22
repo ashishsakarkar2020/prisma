@@ -1,2 +1,13 @@
-<time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
-<p class="byline author vcard"><?php echo __('By', 'roots'); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></p>
+<?php $category = get_the_category(); ?>
+
+
+<p class="h3 meta">
+	<time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
+	<small>
+		<?php 
+foreach((get_the_category()) as $category) { 
+    echo '| <span class="' . $category->slug . '">' . $category->cat_name . '</span> '; 
+} 
+?>
+	</small>
+</p>
