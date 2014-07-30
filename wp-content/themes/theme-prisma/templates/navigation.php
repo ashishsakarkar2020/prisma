@@ -36,7 +36,7 @@ $especes = array(
 
 ?>
 
-<nav class="nav-main" role="navigation">
+<nav class="nav-main" role="navigation" data-spy="affix">
    	<ul class="level-1 nav sf-menu sf-vertical">
    		<li>
         <a href="<?php echo site_url('/'); ?>">
@@ -55,7 +55,7 @@ $especes = array(
 
       </li>
    		<li>
-        <a href="<?php echo site_url('/'); ?>">
+        <a href="#">
           <div class="vbloc">Services &amp; produits</div>
           <div class="vbloc"><span class="icon icon-produits"></span></div>
         </a>

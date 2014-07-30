@@ -118,8 +118,10 @@ if( have_rows('slider') ):
                 <!-- end of the loop -->
 
                 <?php wp_reset_postdata(); ?>
-            </div>
-        </div>
+
+                <p class="text-right"><a href="<?php echo site_url('/actualites'); ?>">Toutes les actualiltés</a></p>
+            </div> <!-- /.actualites -->
+        </div> <!-- /.col-xs-6 -->
         
         <!-- Section Accès directs -->
 

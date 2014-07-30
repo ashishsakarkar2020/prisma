@@ -11,6 +11,12 @@ body {
 	position: relative;
 }
 
+
+.nav-main.affix {
+	position: fixed;
+	left: 0;
+}
+
 .main {
 	background: #fff;
 	position: relative;
@@ -125,6 +131,10 @@ body {
 .content-info {
 	padding: 10px 0 60px 0;
 	background: url('../img/logo-prisma-footer.jpg') center bottom no-repeat;
+}
+
+.nav-footer a {
+	color: #999;
 }
 
 /*Slider*/

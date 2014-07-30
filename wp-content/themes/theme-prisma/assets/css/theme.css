@@ -187,6 +187,7 @@
 	text-transform: uppercase;
 }
 
+
 .sf-menu, .sf-menu *{
 	margin: 0;
 	padding: 0;
@@ -210,6 +211,7 @@
 	display: block;
 	text-align: right;
 }
+
 
 .sf-menu li:hover > ul,
 .sf-menu li.sfHover > ul {

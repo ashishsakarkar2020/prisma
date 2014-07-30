@@ -1,4 +1,4 @@
-<article <?php post_class("col-xs-offset-1"); ?>>
+<article <?php post_class(); ?>>
 
 	<header class="page-header">
 	    <?php get_template_part('templates/entry-meta'); ?>

@@ -12,7 +12,7 @@ add_theme_support('jquery-cdn');            // Enable to load jQuery from the Go
  * Configuration values
  */
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
-define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
+define('POST_EXCERPT_LENGTH', 25); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
 
 /**
  * .main classes
@@ -20,10 +20,10 @@ define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter 
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'col-sm-9';
+    $class = 'col-xs-9';
   } else {
     // Classes on full width pages
-    $class = 'col-sm-12';
+    $class = 'col-xs-12';
   }
 
   return $class;
@@ -33,7 +33,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return 'col-sm-3';
+  return 'col-xs-3';
 }
 
 /**
