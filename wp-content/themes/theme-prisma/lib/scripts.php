@@ -3,7 +3,7 @@
  * Enqueue scripts and stylesheets
  *
  * Enqueue stylesheets in the following order:
- * 1. /theme/assets/css/main.b67c.min.css
+ * 1. /theme/assets/css/main.05d7.min.css
  *
  * Enqueue scripts in the following order:
  * 1. jquery-1.11.0.min.js via Google CDN
@@ -13,7 +13,7 @@
 function roots_scripts() {
 
   
-  wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.b67c.min.css', false, true, 'all');
+  wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.05d7.min.css', false, true, 'all');
   wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, true, 'all');
   wp_enqueue_style('theme', get_template_directory_uri() . '/assets/css/theme.css', false, true, 'all');
   wp_enqueue_style('plugins', get_template_directory_uri() . '/assets/css/plugins.3fc1.min.css', false, true, 'all');

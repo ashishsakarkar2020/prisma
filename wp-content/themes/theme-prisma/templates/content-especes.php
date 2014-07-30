@@ -1,31 +1,35 @@
 <?php 
-$inno = array(
-    'post_type'      => 'especes',
-    'posts_per_page' => -1,
-    'post_parent'    => $post->ID,
-    'order'          => 'ASC',
-    'orderby'        => 'menu_order'
- );
+
 while (have_posts()) : the_post(); ?>
+
+<?php if ( $post->post_parent > 0 ) : // page innovation par catégorie ?>
   
   <article <?php post_class(); ?>>
 
-    <?php if ( $post->post_parent > 0 ) : // page innovation par catégorie ?>
-      
-      <!-- Atouts -->
-      <section class="section">
+    <div class="section section-header">
 
-        <div class="row">
+          <div class="row">
+
+            <div class="col-xs-4">
+              <header class="wrapper">
+                <h1 class="entry-title"><span class="icon icon-<?php echo get_the_slug();?>"></span> <?php the_title(); ?></h1>
+                <?php if(get_field('chapo')) { ?>
+                  <p class="lead"><?php the_field('chapo'); ?></p>
+                <?php } ?>
+              </header>
+            </div>
+
+            <div class="col-xs-8">
+              <?php get_template_part('templates/slider'); ?>
+            </div>
+
+        </div> <!-- /row -->
+    </div> <!-- / header -->
+   
+    <div class="section">
+
+       <div class="row">
           
-          <header class="entry-content col-xs-10 col-xs-offset-1">
-            <h1><?php the_title(); ?></h1>
-            
-            <?php if(get_field('soutitre')) { ?>
-              <h2><?php the_field('soutitre'); ?></h2>
-            <?php } ?>
-
-          </header>
-
           <div class="entry-content col-xs-10 col-xs-offset-1">
             
             <?php the_content(); ?>
@@ -61,14 +65,25 @@ while (have_posts()) : the_post(); ?>
 
           </div>
           
-        </div>
+        </div> <!-- /row -->
 
-      <section>
+      </div> <!-- /.section -->
 
-    <?php else : // page espèces ?>
-  
+    </article>
 
-      <div class="section section-header">
+<?php else : // page espèces
+
+    $inno = array(
+    'post_type'      => 'especes',
+    'posts_per_page' => -1,
+    'post_parent'    => $post->ID,
+    'order'          => 'ASC',
+    'orderby'        => 'menu_order'
+ ); ?>
+
+  <article <?php post_class(); ?>>
+
+    <div class="section section-header">
 
           <div class="row">
 
@@ -85,8 +100,8 @@ while (have_posts()) : the_post(); ?>
               <?php get_template_part('templates/slider'); ?>
             </div>
 
-        </div>
-      </div>
+        </div> <!-- /.row -->
+    </div> <!-- /.section-header -->
     
     <!-- Atouts -->
     <section class="section">
@@ -127,7 +142,7 @@ while (have_posts()) : the_post(); ?>
             ?>
 
               <li>
-                <h3><a href="<?php the_permalink(); ?>" class="text-warning"><?php the_title(); ?></a> <em><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
+                <h3><a href="<?php the_permalink(); ?>" class="text-warning"><?php the_title(); ?></a> <em class="text-muted"><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
                 <?php the_sub_field('description'); ?>
 
               </li>
@@ -173,7 +188,7 @@ while (have_posts()) : the_post(); ?>
             ?>
 
               <li>
-                <h3><a href="<?php the_permalink(); ?>" class="text-warning"><?php the_title(); ?></a> <em><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
+                <h3><a href="<?php the_permalink(); ?>" class="text-primary"><?php the_title(); ?></a> <em class="text-muted"><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
                 <?php the_sub_field('description'); ?>
 
               </li>
@@ -199,9 +214,7 @@ while (have_posts()) : the_post(); ?>
     <section>
 
 
-      <footer>
-        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-      </footer>
+     
 
     </article>
 
@@ -254,4 +267,13 @@ while (have_posts()) : the_post(); ?>
 
   <?php endif; // is subpage ?>
 
+
 <?php endwhile; ?>
+
+<nav>
+  <ul class="pager">
+    <li class="previous"><?php previous_post_link('%link', 'catégorie précédente', true,'', 'post_tag'); ?></li>
+    <li class="next"><?php next_post_link('%link', 'catégorie suivante', true, '', 'post_tag'); ?></li>
+</nav>
+
+        
