@@ -1,5 +1,5 @@
 
-  <article class="row">
+  <article class="row innovation">
     
       <div class=" col-xs-4">
 
@@ -25,3 +25,4 @@
 
 
   </article>
+  <hr>

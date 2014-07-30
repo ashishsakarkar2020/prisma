@@ -45,7 +45,7 @@ $especes = array(
         </a>
       </li>
    		<li>
-        <a href="<?php echo get_permalink( 7 ); ?>">
+        <a href="#">
           <div class="vbloc"><?php echo get_the_title( 7 ); ?></div>
           <div class="vbloc"><span class="icon icon-prisma"></span></div>
         </a>
