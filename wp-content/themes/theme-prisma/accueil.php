@@ -12,7 +12,9 @@ $actus = array(
 // especes
 $especes = array(
     'post_type' => 'especes',
-    'post_parent' => 0
+    'post_parent' => 0,
+    'orderby'=>'menu_order',
+    'order'=>'ASC'
     );
 
 $services = array(

@@ -6,7 +6,9 @@
 
       <header class="col-xs-10 col-xs-offset-1 page-header">
         <h1 class="entry-title text-warning picto-title"><span class="icon icon-gear"></span> <?php the_title(); ?></h1>
-        <h2 class="subtitle h3">services</h2>
+        <?php if(get_field('soutitre')) { ?>
+         <h2 class="subtitle h3"><?php the_field('soutitre'); ?></h2>
+        <?php } ?>
       </header>
 
       <div class="entry-content col-xs-10 col-xs-offset-1 section">

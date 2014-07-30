@@ -12,11 +12,6 @@ body {
 }
 
 
-.nav-main.affix {
-	position: fixed;
-	left: 0;
-}
-
 .main {
 	background: #fff;
 	position: relative;

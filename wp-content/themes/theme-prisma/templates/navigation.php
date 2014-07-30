@@ -36,7 +36,7 @@ $especes = array(
 
 ?>
 
-<nav class="nav-main" role="navigation" data-spy="affix">
+<nav class="nav-main" role="navigation">
    	<ul class="level-1 nav sf-menu sf-vertical">
    		<li>
         <a href="<?php echo site_url('/'); ?>">

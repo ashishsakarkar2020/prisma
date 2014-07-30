@@ -182,8 +182,8 @@
 .nav-main {
 	width: 180px;
 	padding-top: 110px;
-	position: absolute;
-	left: -180px;
+	position: fixed;
+	left: 0;
 	text-transform: uppercase;
 }
 
