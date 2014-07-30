@@ -1,9 +1,6 @@
 /*** ESSENTIAL STYLES ***/
 .nav-main {
-	width: 180px;
 	padding-top: 110px;
-	position: fixed;
-	left: 0;
 	text-transform: uppercase;
 }
 

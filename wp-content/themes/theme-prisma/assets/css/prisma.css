@@ -4,13 +4,30 @@ body {
 }
 
 .container {
-	width: 780px; 
-	margin: 0;
-	margin-left: 180px;
-	padding: 0;
+	width: 1140px;
 	position: relative;
 }
 
+.nav-main {
+	width: 180px;
+	position: fixed;
+	left: 50%;
+	margin-left: -570px;
+}
+
+@media (max-width: 1140px) {
+
+	.nav-main {
+		left: 570px;
+	}
+}
+
+.wrap {
+	width: 780px; 
+	margin: auto;
+	padding: 0;
+	position: relative;
+}
 
 .main {
 	background: #fff;
@@ -90,16 +107,16 @@ body {
 
 .nav-section {
 	width: 50px;
-	position: absolute;
-	top: 110px;
-	right: -50px;
+	position: fixed;
+	top: 120px;
+	right: 50%;
+	margin-right: -450px;
 }
 
-.nav-section.affix {
-	position: fixed;
-	top: 10px;
-	left: 960px;
-
+@media (max-width: 1140px) {
+.nav-section {
+	right: 450px;
+	}
 }
 
 .arrow a {

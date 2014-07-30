@@ -8,10 +8,11 @@
   <![endif]-->
 
 <div class="container">
+   <?php get_template_part('templates/navigation'); ?>
   
   <div class="wrap" role="document">
 
-      <?php get_template_part('templates/navigation'); ?>
+     
 
     <div class="content row">
 
@@ -37,7 +38,7 @@
         <?php get_template_part('templates/footer'); ?>
       </div>
 
-       <div class="nav-section arrow" data-spy="affix" data-offset-top="110">
+       <div class="nav-section arrow" >
             <a href="#" class="prev-section"><span class="icon icon-arrow-up"></span></a>
             <a href="#" class="next-section"><span class="icon icon-arrow-down"></span></a>
         </div>
