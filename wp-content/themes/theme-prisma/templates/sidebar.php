@@ -1,6 +1,7 @@
 <?php
 
  $category = get_the_category();
+ $catid = $category->cat_ID;
 
 
 $args_archives = array(
@@ -23,8 +24,7 @@ $args_categories = array(
 	'exclude'            => '1',
 	'title_li'           => '',
 	'echo'               => 1,
-	'depth'              => 1,
-	'current_category'   => $category->cat_ID,
+	'current_category'   => $catid,
 	'taxonomy'           => 'category'
 ); 
 

@@ -47,7 +47,7 @@ var Roots = {
     init: function() {
 
         $('.carousel').owlCarousel({
-          loop:true,
+          loop:false,
           items:5,
           center:true,
           margin:10,
@@ -103,7 +103,7 @@ var Roots = {
     init: function() {
 
         $('.carousel').owlCarousel({
-          loop:true,
+          loop:false,
           items:3,
           center:true,
           margin:10,

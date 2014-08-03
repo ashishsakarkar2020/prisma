@@ -121,7 +121,7 @@ if( have_rows('slider') ):
 
                 <?php wp_reset_postdata(); ?>
 
-                <p class="text-right"><a href="<?php echo site_url('/actualites'); ?>">Toutes les actualiltés</a></p>
+                <p class="text-right"><a href="<?php echo site_url('/qui-sommes-nous/actualites'); ?>">Toutes les actualiltés</a></p>
             </div> <!-- /.actualites -->
         </div> <!-- /.col-xs-6 -->
         

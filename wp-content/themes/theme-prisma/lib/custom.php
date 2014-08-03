@@ -30,6 +30,127 @@ function get_the_slug() {
 
 }
 
+// commentaires
+
+add_filter('comments_open', 'wpc_comments_closed', 10, 2);
+
+function wpc_comments_closed( $open, $post_id ) {
+$post = get_post( $post_id );
+if ('post' == $post->post_type)
+$open = false;
+return $open;
+}
+
+//pagination
+
+/** Fonction pour la pagination **/
+  function pagination( $query) {
+    // Nombre d'elements a afficher avant et après la page courante
+    $NB_TO_DISPLAY = 4;
+  
+    $baseURL = "http://".$_SERVER['HTTP_HOST'];
+    if($_SERVER['REQUEST_URI'] != "/"){
+      $baseURL = $baseURL.$_SERVER['REQUEST_URI'];
+    }
+    
+    // Suppression de '/page' de l'URL
+    $sep = strrpos($baseURL, '/page/');
+    if($sep != FALSE){
+      $baseURL = substr($baseURL, 0, $sep);
+    }
+    
+    // Suppression des parametres de l'URL
+    $sep = strrpos($baseURL, '?');
+    if($sep != FALSE){
+      // On supprime le caractere avant qui est un '/' 
+      $baseURL = substr($baseURL, 0, ($sep-1));
+    }
+    
+    // Recuperation des parametres pour les re-afficher dans les liens
+    $qs = $_SERVER["QUERY_STRING"] ? "?".$_SERVER["QUERY_STRING"] : "";
+    $hasQs = false;
+    
+    if($qs != "")
+      $hasQs = true;
+  
+    $page = $query->query_vars["paged"];
+    if ( !$page ){
+      $page = 1;
+    }
+  
+    // Generation et affichage uniquement si il y a plusieurs pages
+    if ( $query->found_posts > $query->query_vars["posts_per_page"] ) {
+      // Calcul des pages a afficher
+      $minPage = $page - $NB_TO_DISPLAY;
+      if($minPage <= 0){
+        $minPage = 1;
+      }
+      $maxPage = $minPage + ($NB_TO_DISPLAY * 2);
+      if($maxPage > $query->max_num_pages){
+        $maxPage = $query->max_num_pages;
+      }
+  
+      $html =  '<ul class="pagination">';
+      //$html .= "<li>Page ".$page." sur ".$query->max_num_pages."</li>";
+  
+      if($page > 1){
+        $previous = $page -1;
+        $html .= "<li><a href='".$baseURL."page/".$previous;
+        if($hasQs)
+          $html .= $qs;
+        $html .= "'>&laquo;</a></li>";
+      } 
+      if($minPage > 1){
+                $html .= "<li><a href='".$baseURL."page/1";
+                if($hasQs)
+                  $html .= $qs;
+                $html .= "'>1</a></li>";
+      }
+      if($minPage > 2){      
+                      $html .= "<li>...</li>";
+                    } 
+  
+      // Boucle dans les pages
+      for ( $i=$minPage; $i <= $maxPage; $i++ ) {
+        // Detection de la page active dans la liste des liens
+        if ( $i == $page ) {
+          $html .= '<li class="active"><a href="'.$baseURL.'page/'.$i;
+          if($hasQs)
+            $html .= $qs;
+          $html .= '">'.$i.'</a></li>';
+        } else {
+          $html .= '<li><a href="'.$baseURL.'page/'.$i;
+          if($hasQs)
+            $html .= $qs;
+          $html .= '">'.$i.'</a></li>';
+        }
+      }
+
+      if($maxPage < $query->max_num_pages){
+              if($maxPage < $query->max_num_pages -1)
+                $html .= "<li>...</li>";
+        $html .= '<li><a href="'.$baseURL.'page/'.$query->max_num_pages;
+        if($hasQs)
+          $html .= $qs;
+        $html .='">'.$query->max_num_pages.'</a></li>';
+      }        
+      if($page < $query->max_num_pages){
+        $html .= '<li><a href="'.$baseURL.'page/'.($page+1);
+        if($hasQs)
+          $html .= $qs;
+        $html .= '">&raquo;</a></li>';
+      }
+      $html .= '</ul>';
+  
+      // Affichage de la liste des liens
+          echo $html;
+    }
+  }
+
+
+
+//menus
+
 add_action( 'init', 'register_prisma_menus' );
 
 // Tailles des vignettes
@@ -64,9 +185,9 @@ add_action( 'admin_menu', 'wpc_excerpt_pages' );
 function dimox_breadcrumbs(){
   /* === OPTIONS === */
   $text['home']     = 'Accueil'; // text for the 'Home' link
-  $text['category'] = 'Archive by Category "%s"'; // text for a category page
-  $text['tax']    = 'Archive for "%s"'; // text for a taxonomy page
-  $text['search']   = 'Search Results for "%s" Query'; // text for a search results page
+  $text['category'] = '"%s"'; // text for a category page
+  $text['tax']    = '"%s"'; // text for a taxonomy page
+  $text['search']   = 'Résultats pour "%s"'; // text for a search results page
   $text['tag']      = 'Posts Tagged "%s"'; // text for a tag page
   $text['author']   = 'Articles Posted by %s'; // text for an author page
   $text['404']      = 'Error 404'; // text for the 404 page
@@ -195,7 +316,7 @@ function dimox_breadcrumbs(){
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
  
-    echo '</ul>';
+    echo '</ol>';
  
   }
 } // end dimox_breadcrumbs()
