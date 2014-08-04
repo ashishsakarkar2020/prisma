@@ -1,19 +1,21 @@
 <?php $images = get_field('slider');
+ 
   if( $images ): ?>
+
   <div class="slider-wrapper section">
+    
     <div class="slider">
   
       <?php foreach( $images as $image ):?>
           <div>
               <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
-      
           </div>
           
       <?php endforeach; ?>
 
     </div><!-- /slider -->
 
-    <?php if(is_single() && count($images) != 1) : ?>
+    <?php if(count($images) != 1) : ?>
 
 	    <div class="arrow nav-slider text-right">
 	      <a href="#" class="prev"><span class="icon icon-arrow-left"></span></a>

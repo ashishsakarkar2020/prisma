@@ -42,110 +42,35 @@ return $open;
 }
 
 //pagination
-
-/** Fonction pour la pagination **/
-  function pagination( $query) {
-    // Nombre d'elements a afficher avant et après la page courante
-    $NB_TO_DISPLAY = 4;
+if( !function_exists( 'theme_pagination' ) ) {
   
-    $baseURL = "http://".$_SERVER['HTTP_HOST'];
-    if($_SERVER['REQUEST_URI'] != "/"){
-      $baseURL = $baseURL.$_SERVER['REQUEST_URI'];
-    }
+    function theme_pagination() {
+  
+  global $wp_query, $wp_rewrite;
+  $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+  
+  $pagination = array(
+    'base' => @add_query_arg('page','%#%'),
+    'format' => '',
+    'total' => $wp_query->max_num_pages,
+    'current' => $current,
+          'show_all' => false,
+          'end_size'     => 1,
+          'mid_size'     => 2,
+    'type' => 'list',
+    'next_text' => '»',
+    'prev_text' => '«'
+  );
+  
+  if( $wp_rewrite->using_permalinks() )
+    $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+  
+  if( !empty($wp_query->query_vars['s']) )
+    $pagination['add_args'] = array( 's' => str_replace( ' ' , '+', get_query_var( 's' ) ) );
     
-    // Suppression de '/page' de l'URL
-    $sep = strrpos($baseURL, '/page/');
-    if($sep != FALSE){
-      $baseURL = substr($baseURL, 0, $sep);
-    }
-    
-    // Suppression des parametres de l'URL
-    $sep = strrpos($baseURL, '?');
-    if($sep != FALSE){
-      // On supprime le caractere avant qui est un '/' 
-      $baseURL = substr($baseURL, 0, ($sep-1));
-    }
-    
-    // Recuperation des parametres pour les re-afficher dans les liens
-    $qs = $_SERVER["QUERY_STRING"] ? "?".$_SERVER["QUERY_STRING"] : "";
-    $hasQs = false;
-    
-    if($qs != "")
-      $hasQs = true;
-  
-    $page = $query->query_vars["paged"];
-    if ( !$page ){
-      $page = 1;
-    }
-  
-    // Generation et affichage uniquement si il y a plusieurs pages
-    if ( $query->found_posts > $query->query_vars["posts_per_page"] ) {
-      // Calcul des pages a afficher
-      $minPage = $page - $NB_TO_DISPLAY;
-      if($minPage <= 0){
-        $minPage = 1;
-      }
-      $maxPage = $minPage + ($NB_TO_DISPLAY * 2);
-      if($maxPage > $query->max_num_pages){
-        $maxPage = $query->max_num_pages;
-      }
-  
-      $html =  '<ul class="pagination">';
-      //$html .= "<li>Page ".$page." sur ".$query->max_num_pages."</li>";
-  
-      if($page > 1){
-        $previous = $page -1;
-        $html .= "<li><a href='".$baseURL."page/".$previous;
-        if($hasQs)
-          $html .= $qs;
-        $html .= "'>&laquo;</a></li>";
-      } 
-      if($minPage > 1){
-                $html .= "<li><a href='".$baseURL."page/1";
-                if($hasQs)
-                  $html .= $qs;
-                $html .= "'>1</a></li>";
-      }
-      if($minPage > 2){      
-                      $html .= "<li>...</li>";
-                    } 
-  
-      // Boucle dans les pages
-      for ( $i=$minPage; $i <= $maxPage; $i++ ) {
-        // Detection de la page active dans la liste des liens
-        if ( $i == $page ) {
-          $html .= '<li class="active"><a href="'.$baseURL.'page/'.$i;
-          if($hasQs)
-            $html .= $qs;
-          $html .= '">'.$i.'</a></li>';
-        } else {
-          $html .= '<li><a href="'.$baseURL.'page/'.$i;
-          if($hasQs)
-            $html .= $qs;
-          $html .= '">'.$i.'</a></li>';
-        }
-      }
-
-      if($maxPage < $query->max_num_pages){
-              if($maxPage < $query->max_num_pages -1)
-                $html .= "<li>...</li>";
-        $html .= '<li><a href="'.$baseURL.'page/'.$query->max_num_pages;
-        if($hasQs)
-          $html .= $qs;
-        $html .='">'.$query->max_num_pages.'</a></li>';
-      }        
-      if($page < $query->max_num_pages){
-        $html .= '<li><a href="'.$baseURL.'page/'.($page+1);
-        if($hasQs)
-          $html .= $qs;
-        $html .= '">&raquo;</a></li>';
-      }
-      $html .= '</ul>';
-  
-      // Affichage de la liste des liens
-          echo $html;
-    }
-  }
+  echo str_replace('page/1/','', paginate_links( $pagination ) );
+    } 
+}
 
 
 
@@ -185,7 +110,7 @@ add_action( 'admin_menu', 'wpc_excerpt_pages' );
 function dimox_breadcrumbs(){
   /* === OPTIONS === */
   $text['home']     = 'Accueil'; // text for the 'Home' link
-  $text['category'] = '"%s"'; // text for a category page
+  $text['category'] = 'Actualités "%s"'; // text for a category page
   $text['tax']    = '"%s"'; // text for a taxonomy page
   $text['search']   = 'Résultats pour "%s"'; // text for a search results page
   $text['tag']      = 'Posts Tagged "%s"'; // text for a tag page
@@ -328,3 +253,25 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
   else 
                return false;  // we're elsewhere
 };
+
+
+
+//post per page  
+
+function my_post_queries( $query ) {
+  // do not alter the query on wp-admin pages and only alter it if it's the main query
+  if (!is_admin() && $query->is_main_query()){
+
+    // alter the query for the home and category pages 
+
+    if(is_home()){
+      $query->set('posts_per_page', 1);
+    }
+
+    if(is_category()){
+      $query->set('posts_per_page', 1);
+    }
+
+  }
+}
+add_action( 'pre_get_posts', 'my_post_queries' );

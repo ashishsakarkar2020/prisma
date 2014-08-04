@@ -1,7 +1,7 @@
 //
 // Pagination (multiple pages)
 // --------------------------------------------------
-.pagination {
+.pagination ul {
   display: inline-block;
   padding-left: 0;
   margin: @line-height-computed 0;
@@ -47,7 +47,8 @@
   }
 
   > .active > a,
-  > .active > span {
+  > .active > span,
+  > li > .current {
     &,
     &:hover,
     &:focus {

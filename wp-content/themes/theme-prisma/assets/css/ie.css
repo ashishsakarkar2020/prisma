@@ -7,3 +7,12 @@ body {
 	box-shadow: none;
 	border: 2px solid #ccc;
 }
+
+.carousel .slide {
+  z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.carousel .center .slide {
+  	z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	zomm:1.3;
+}

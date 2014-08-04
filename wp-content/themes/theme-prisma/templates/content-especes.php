@@ -2,9 +2,11 @@
 
 while (have_posts()) : the_post(); ?>
 
+<article <?php post_class(); ?>>
+
 <?php if ( $post->post_parent > 0 ) : // page innovation par catégorie ?>
   
-  <article <?php post_class(); ?>>
+  
 
     <div class="section section-header">
 
@@ -63,8 +65,6 @@ while (have_posts()) : the_post(); ?>
 
       </div> <!-- /.section -->
 
-    </article>
-
 <?php else : // page espèces
 
     $inno = array(
@@ -74,8 +74,6 @@ while (have_posts()) : the_post(); ?>
     'order'          => 'ASC',
     'orderby'        => 'menu_order'
  ); ?>
-
-  <article <?php post_class(); ?>>
 
     <div class="section section-header">
 
@@ -110,7 +108,7 @@ while (have_posts()) : the_post(); ?>
         </div>
         <footer class="section-footer col-xs-10 col-xs-offset-1"></footer>
       </div>
-    <section>
+    </section>
 
     <!-- services -->
     <section class="section">
@@ -159,7 +157,7 @@ while (have_posts()) : the_post(); ?>
         <footer class="section-footer col-xs-10 col-xs-offset-1"></footer>
 
       </div>
-    <section>    
+    </section>    
        
     <!-- Produits -->
     <section class="section">
@@ -205,12 +203,9 @@ while (have_posts()) : the_post(); ?>
         <footer class="section-footer col-xs-10 col-xs-offset-1"></footer>
 
       </div>
-    <section>
+    </section>  
 
 
-     
-
-    </article>
 
     <!-- Innovations par catégorie -->
 
@@ -261,6 +256,7 @@ while (have_posts()) : the_post(); ?>
 
   <?php endif; // is subpage ?>
 
+  </article>
 
 <?php endwhile; ?>
 
@@ -268,6 +264,7 @@ while (have_posts()) : the_post(); ?>
   <ul class="pager">
     <li class="previous"><?php previous_post_link('%link', 'catégorie précédente', true,'', 'post_tag'); ?></li>
     <li class="next"><?php next_post_link('%link', 'catégorie suivante', true, '', 'post_tag'); ?></li>
+  </ul>
 </nav>
 
         

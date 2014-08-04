@@ -348,6 +348,7 @@ body {
 	opacity:0.5;
 	transition:all 300ms ease;
 	margin-top: 50px;
+	 /* IE 8 */
 }
 
 .carousel .center .slide {
@@ -376,6 +377,11 @@ section.liste {
 
 aside.contact {
 	border-top: 10px solid #10a4e4;
+}
+/*Actus */
+
+.archive .h3 {
+	margin-top: 0;
 }
 
 /*Sidebar*/

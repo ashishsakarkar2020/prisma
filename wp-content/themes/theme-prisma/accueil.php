@@ -66,16 +66,23 @@ if( have_rows('slider') ):
                         <h1><?php the_sub_field('titre'); ?></h1>
                         <hr>
                         <h2><?php the_sub_field('sous_titre'); ?></h2>
-                        <p><a href="<?php the_sub_field('lien'); ?>"class="btn btn-primary">Lire la suite</a></p>
+                        <p><a href="<?php the_sub_field('lien'); ?>" class="btn btn-primary">Lire la suite</a></p>
                     </div>
                 </div>
-            </div>        
+            </div>   <!-- slide -->     
         <?php endif; ?>
     
 
     <?php endwhile; ?>
 
-    </div>
+    </div><!-- slider -->
+
+
+        <div class="arrow nav-slider text-right">
+          <a href="#" class="prev"><span class="icon icon-arrow-left"></span></a>
+          <a href="#" class="next bloc"><span class="icon icon-arrow-right"></span></a>
+        </div><!-- /nav wrapper -->
+
         
 <?php endif; ?>        
 
@@ -115,7 +122,9 @@ if( have_rows('slider') ):
                       <?php   } ?>
                     <p><?php the_excerpt() ; ?></p>
                     <a href="<?php the_permalink() ; ?>" class="btn btn-primary">lire la suite</a>
+                
                 </article>
+
                 <?php endwhile; ?>
                 <!-- end of the loop -->
 

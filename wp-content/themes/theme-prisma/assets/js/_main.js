@@ -98,7 +98,7 @@ var Roots = {
     }
   },
 
-  // Home page
+  // espece page
   single_especes: {
     init: function() {
 
@@ -120,19 +120,26 @@ var Roots = {
     init: function() {
       // slider
 
-       
-
         $('.slider').owlCarousel({
           items:1,
           dots:false,
           autoHeight:true,
-          loop:true,
-          nav: false,
+          autoplay:true,
+          loop:false,
+          nav:false
         });
       
+      $(".nav-slider .next").click(function(){
+          $('.slider').trigger('next.owl.carousel');
+        })
+
+      $(".nav-slider .prev").click(function(){
+        $('.slider').trigger('prev.owl.carousel');
+      })
         
     }
   },
+
   page_template_page_institutionnelle_php: {
     init: function() {
       // JavaScript to be fired on the contenu template page
