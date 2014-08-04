@@ -140,15 +140,7 @@ var Roots = {
     }
   },
 
-  page_template_page_institutionnelle_php: {
-    init: function() {
-      // JavaScript to be fired on the contenu template page
-    $('.slider').slick({
-          arrows: true
-        });
-      
-    }
-  }
+  
 };
 
 // The routing fires all common scripts, followed by the page specific scripts.

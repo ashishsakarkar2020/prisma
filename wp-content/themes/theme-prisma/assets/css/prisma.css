@@ -13,6 +13,7 @@ body {
 	position: fixed;
 	left: 50%;
 	margin-left: -570px;
+	z-index: 500;
 }
 
 @media (max-width: 1140px) {
@@ -27,6 +28,7 @@ body {
 	margin: auto;
 	padding: 0;
 	position: relative;
+	z-index: 0;
 }
 
 .main {
@@ -367,6 +369,15 @@ body {
 
 /*Gabarit institutionel
 */
+
+.bg-intro {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #e9e9e9;
+	background-position: top left;
+	min-height: 350px;
+}
+
 
 section.liste {
 	font-size: 1.5em;

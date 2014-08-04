@@ -2,10 +2,22 @@
 /*
 Template Name: Institutionnelle
 */
+if(get_field('background')) {
+	$bg = get_field('background');
+}
 ?>
 
+<header class="section bg-intro" style="background-image: url('<?php echo $bg;?>')">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-1">
+			<?php get_template_part('templates/page', 'header'); ?>
+			<?php if(get_field('chapo')) { ?>
+				<p class="lead"><?php the_field('chapo'); ?></p>
+			<?php } ?>
+		</div>
+	</div>
+</header>
 
-<?php get_template_part('templates/page', 'header'); ?>
 
 <?php
 
