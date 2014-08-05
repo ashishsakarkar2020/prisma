@@ -19,7 +19,6 @@
 	display: none;
 	top: 100%;
 	left: 0;
-	z-index: 99;
 }
 .sf-menu > li {
 	float: left;
@@ -77,6 +76,7 @@
 	border: 1px solid #ccc;
 	border-left: none;
 	padding: 10px;
+	z-index: 800;
 }
 
 .level-2 h2 {
