@@ -1,8 +1,6 @@
 <?php
 
- $category = get_the_category();
- $catid = $category->cat_ID;
-
+ $catid = get_query_var('cat');
 
 $args_archives = array(
 	'type'            => 'monthly',
@@ -32,11 +30,15 @@ $args_categories = array(
 <div class="wrapper">
 	<nav class="archives widget ombrage">
 		<h3 class="widget-title bg-info">Archives</h3>
-		<ul class="nav"><?php wp_get_archives( $args_archives ); ?> </ul>
+		<ul class="nav">
+			<?php wp_get_archives( $args_archives ); ?>
+		</ul>
 	</nav>
 	<nav class="themes widget ombrage">
 		<h3 class="widget-title bg-primary">Thèmes</h3>
-		<ul class="nav"><?php wp_list_categories($args_categories); ?></ul>
+		<ul class="nav">
+			<?php wp_list_categories($args_categories); ?>
+		</ul>
 	</nav>
 	<?php dynamic_sidebar('sidebar-primary'); ?>
 </div>

@@ -4,7 +4,6 @@ Template Name: Contenu
 */
 ?>
 
-
 <?php get_template_part('templates/slider'); ?>
 
 <div class="row">
