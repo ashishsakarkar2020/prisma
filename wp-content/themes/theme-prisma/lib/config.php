@@ -55,7 +55,9 @@ function roots_display_sidebar() {
      */
     array(
       'is_home',
-      array('is_post_type_archive', array('post')),
+      array('is_category'),
+      array('is_tag'),
+      array('is_date'),
       array('is_singular', array('post')),
     ),
     
