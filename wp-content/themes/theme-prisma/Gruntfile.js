@@ -117,7 +117,7 @@ module.exports = function(grunt) {
     },
     concat: {
       theme: {
-        src: ['assets/css/fonts.css', 'assets/css/navigation.css'],
+        src: ['assets/css/navigation.css'],
         dest: 'assets/css/theme.css',
       },
       plugins: {
