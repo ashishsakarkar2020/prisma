@@ -37,7 +37,7 @@ function roots_sidebar_class() {
 }
 
 /**
- * Define which pages shouldn't have the sidebar
+ * Define which pages should have the sidebar
  *
  * See lib/sidebar.php for more details
  */
@@ -55,7 +55,7 @@ function roots_display_sidebar() {
      */
     array(
       'is_home',
-      'is_archive',
+      array('is_post_type_archive', array('post')),
       array('is_singular', array('post')),
     ),
     
