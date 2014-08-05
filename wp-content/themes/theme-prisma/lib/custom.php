@@ -258,20 +258,20 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
 
 //post per page  
 
-function my_post_queries( $query ) {
-  // do not alter the query on wp-admin pages and only alter it if it's the main query
-  if (!is_admin() && $query->is_main_query()){
+//  function my_post_queries( $query ) {
+//   // do not alter the query on wp-admin pages and only alter it if it's the main query
+//   if (!is_admin() && $query->is_main_query()){
 
-    // alter the query for the home and category pages 
+//     // alter the query for the home and category pages 
 
-    if(is_home()){
-      $query->set('posts_per_page', 1);
-    }
+//     if(is_home()){
+//       $query->set('posts_per_page', 1);
+//     }
 
-    if(is_category()){
-      $query->set('posts_per_page', 1);
-    }
+//     if(is_category()){
+//       $query->set('posts_per_page', 1);
+//     }
 
-  }
-}
-add_action( 'pre_get_posts', 'my_post_queries' );
+//   }
+// }
+// add_action( 'pre_get_posts', 'my_post_queries' );
