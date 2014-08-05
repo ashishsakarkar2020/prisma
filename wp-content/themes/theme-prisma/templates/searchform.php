@@ -1,4 +1,4 @@
-<form role="search" method="get" class="search-form wrapper bg-primary" action="<?php echo home_url('/'); ?>">
+<form role="search" method="get" class="search-form wrapper bg-primary section" action="<?php echo home_url('/'); ?>">
   <div class="row">
   	<label class="control-label sr-only">Rechercher</label>
   	<div class="col-xs-4 col-xs-offset-8">

@@ -2,7 +2,7 @@
  
   if( $images ): ?>
 
-  <div class="slider-wrapper section">
+  <div class="slider-wrapper">
     
     <div class="slider">
   
