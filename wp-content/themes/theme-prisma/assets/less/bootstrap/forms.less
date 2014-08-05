@@ -179,7 +179,7 @@ input[type="date"] {
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
 
-.form-group {
+.form-group, .form-control-wrap, .list-checkbox-wrap {
   margin-bottom: 15px;
 }
 
@@ -189,7 +189,8 @@ input[type="date"] {
 // Indent the labels to position radios/checkboxes as hanging controls.
 
 .radio,
-.checkbox {
+.checkbox
+.list-checkbox-wrap li {
   display: block;
   min-height: @line-height-computed; // clear the floating input if there is no label text
   margin-top: 10px;
@@ -204,7 +205,8 @@ input[type="date"] {
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
+.checkbox-inline input[type="checkbox"],
+input[type="checkbox"] {
   float: left;
   margin-left: -20px;
 }
@@ -215,16 +217,19 @@ input[type="date"] {
 
 // Radios and checkboxes on same line
 .radio-inline,
-.checkbox-inline {
+.checkbox-inline,
+.list-checkbox-wrap li {
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
+  margin-right: 20px;
   vertical-align: middle;
   font-weight: normal;
   cursor: pointer;
 }
 .radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
+.checkbox-inline + .checkbox-inline,
+.list-checkbox-wrap li + .list-checkbox-wrap li {
   margin-top: 0;
   margin-left: 10px; // space out consecutive inline controls
 }
@@ -412,8 +417,17 @@ input[type="checkbox"],
   }
 
   // Make form groups behave like rows
-  .form-group {
+  .form-group, .form-control-wrap, .list-checkbox-wrap {
     .make-row();
+  }
+
+  label {
+    .make-xs-column(2);
+  }
+
+  .form-control, .list-checkbox-wrap span {
+    .make-xs-column(6);
+    .make-sm-column-offset(1);
   }
 
   .form-control-static {
@@ -422,7 +436,8 @@ input[type="checkbox"],
 
   // Only right align form labels here when the columns stop stacking
   @media (min-width: @screen-sm-min) {
-    .control-label {
+    .control-label,
+    label {
       text-align: right;
     }
   }
@@ -434,5 +449,56 @@ input[type="checkbox"],
   .has-feedback .form-control-feedback {
     top: 0;
     right: (@grid-gutter-width / 2);
+  }
+}
+
+.ninja-forms-form {
+
+  // Consistent vertical alignment of labels, radios, and checkboxes
+  .form-control-wrap label,
+  .list-checkbox-wrap > label {
+    text-transform: uppercase;
+    color: @brand-primary;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+
+    &:after {
+      content: "\003A";
+    }
+  }
+
+  // Account for padding we're adding to ensure the alignment and of help text
+  // and other content below items
+  .list-checkbox-wrap li {
+    min-height: (@line-height-computed + (@padding-base-vertical + 1));
+  }
+
+  // Make form groups behave like rows
+  .ninja-forms-all-fields-wrap {
+    .make-row();
+  }
+
+  .form-control-wrap {
+    .make-xs-column(6);
+    padding: 0 10px;
+  }
+
+  .textarea-wrap, .address-wrap, .list-checkbox-wrap, .btn-wrap {
+    .make-xs-column(12);
+    padding: 10px;
+  }
+
+  .clear-wrap {
+    clear: left;
+  }
+
+   .btn-wrap {
+    margin-bottom: 20px;
+    text-align: right;
+ }
+
+  .form-control-static {
+    padding-top: (@padding-base-vertical + 1);
   }
 }
