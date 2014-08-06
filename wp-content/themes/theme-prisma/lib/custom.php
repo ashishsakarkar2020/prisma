@@ -254,7 +254,8 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
                return false;  // we're elsewhere
 };
 
-
+//Remove Ninja Forms Stylesheet
+remove_action( 'ninja_forms_display_css', 'ninja_forms_display_css', 10, 2 );
 
 //post per page  
 
