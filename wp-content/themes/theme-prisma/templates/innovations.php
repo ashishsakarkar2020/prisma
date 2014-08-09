@@ -1,17 +1,17 @@
 
   <article class="row innovation">
     
-      <div class=" col-xs-4">
+      <div class="col-xs-5">
 
           <?php if ( has_post_thumbnail() ) : ?>
           
-             <?php the_post_thumbnail('actus', array('class' => 'img-responsive')); ?>
+             <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 
           <?php endif; ?>
 
       </div>
 
-      <div class=" col-xs-8">
+      <div class="col-xs-6 col-xs-offset-1">
 
         <h3><?php the_title(); ?>
 
