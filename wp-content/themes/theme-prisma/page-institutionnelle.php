@@ -82,9 +82,18 @@ if( have_rows('sections') ):
 	            	
 	            	<?php // loop through the rows of data
 					while ( have_rows('description') ) : the_row(); ?>
-	            	<h4><?php the_sub_field('nom');?> <small><?php the_sub_field('fonction');?></small></h4>
-	            	<img src="<?php the_sub_field('image');?>" class="pull-right">
+	            	
+	            	<h3 class="text-primary"><?php the_sub_field('nom');?> <small class="text-muted"><?php the_sub_field('fonction');?></small></h3>
+
+	            	<?php if( get_sub_field('image') ): 
+        				$image = get_sub_field('image'); ?>
+        				<img src="<?php echo $image['sizes']['thumbnail']; ?>" class="pull-right thumbnail" />
+		        	<?php endif;?>
+
 	            	<?php the_sub_field('temoignage');?>
+
+					<hr />
+
 	            	<?php endwhile; ?>
 	         
 
