@@ -237,7 +237,7 @@ if( have_rows('services') ):
         <?php if( get_row_layout() == 'intro' ): 
             $bg = 'bg-info';
         ?>
-        <section class="section">
+        <section class="section accueil-services">
                 
                 <?php if ( get_sub_field('image') ): 
                     $bg = 'slide-caption';
@@ -282,7 +282,7 @@ if( have_rows('produits') ):
         <?php if( get_row_layout() == 'intro' ): 
             $bg = 'bg-primary';
         ?>
-        <section class="section">
+        <section class="section accueil-produits">
                 
                 <?php if ( get_sub_field('image') ): 
                     $bg = 'slide-caption';

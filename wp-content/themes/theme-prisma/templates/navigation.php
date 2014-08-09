@@ -62,11 +62,11 @@ $especes = array(
         <ul class="level-2 column">
           <li class="row-fluid">
             <div class="col-xs-6 services">
-              <h2><span class="icon icon-gear"></span> Services</h2>
+              <h2 class="text-warning"><span class="icon icon-gear"></span> Services</h2>
               <?php if ( has_nav_menu( 'services' ) ) {wp_nav_menu($services); }; ?>
             </div>
             <div class="col-xs-6 produits">
-              <h2><span class="icon icon-produits"></span> Produits</h2>
+              <h2 class="text-info"><span class="icon icon-produits"></span> Produits</h2>
               <?php if ( has_nav_menu( 'produits' ) ) {wp_nav_menu($produits); }; ?>
             </div>        
           </li>

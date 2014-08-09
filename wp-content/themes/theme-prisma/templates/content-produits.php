@@ -7,7 +7,7 @@
     </div>
 
       <header class="col-xs-10 col-xs-offset-1 page-header section">
-        <h1 class="entry-title text-warning picto-title"><span class="icon icon-produits"></span> <?php the_title(); ?></h1>
+        <h1 class="entry-title text-info picto-title"><span class="icon icon-produits"></span> <?php the_title(); ?></h1>
         <?php if(get_field('soutitre')) { ?>
          <h2 class="subtitle h3"><?php the_field('soutitre'); ?></h2>
         <?php } ?>

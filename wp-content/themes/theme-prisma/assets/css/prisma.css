@@ -316,8 +316,11 @@ body {
 }
 
 .section .nav li a:hover, .section .nav li a:active, .section .nav li a:focus {
-	color: #29235c;
 	background: rgba(255,255,255,0.2);
+}
+
+.accueil-services, .accueil-produits {
+	color: #fff;
 }
 
 /*Carousel*/
@@ -378,6 +381,16 @@ body {
 section.liste {
 	font-size: 1.5em;
 	font-family: 'advent-light';
+}
+
+.page-template-page-institutionnelle-php .section h2 {
+	margin-top: 2em;
+}
+
+/*Gabarit presse */
+
+img.thumbnail.pull-right {
+	margin-left: 1em;
 }
 
 /*Contact*/
