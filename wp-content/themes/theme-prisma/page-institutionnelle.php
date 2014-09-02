@@ -5,14 +5,20 @@ Template Name: Institutionnelle
 if(get_field('background')) {
 	$bg = get_field('background');
 }
+else $bg = '';
 ?>
 
 <header class="section bg-intro" style="background-image: url('<?php echo $bg;?>')">
 	<div class="row">
-		<div class="col-xs-4 col-xs-offset-1">
-			<?php get_template_part('templates/page', 'header'); ?>
+		<div class="col-xs-5 col-xs-offset-1">
+			<h1 class="text-primary h2">
+			    <?php echo roots_title(); ?>
+			  </h1>
+			  <?php if (get_field('sous_titre')) { ?>
+			  	<h2 class="subtitle h3"><?php the_field('sous_titre'); ?></h2>
+			  <?php  } ?>
 			<?php if(get_field('chapo')) { ?>
-				<p class="lead"><?php the_field('chapo'); ?></p>
+				<p><?php the_field('chapo'); ?></p>
 			<?php } ?>
 		</div>
 	</div>

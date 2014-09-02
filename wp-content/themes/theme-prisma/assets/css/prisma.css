@@ -387,6 +387,10 @@ section.liste {
 	margin-top: 2em;
 }
 
+.page-template-page-institutionnelle-php .section h2.subtitle {
+	margin-top: 0.5em;
+}
+
 /*Gabarit presse */
 
 img.thumbnail.pull-right {
