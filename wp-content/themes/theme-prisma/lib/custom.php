@@ -179,7 +179,7 @@ function dimox_breadcrumbs(){
       if ( get_post_type() != 'post' ) {
         $post_type = get_post_type_object(get_post_type());
         $slug = $post_type->rewrite;
-        printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
+        printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->name);
         if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
       } else {
         $cat = get_the_category(); $cat = $cat[0];
