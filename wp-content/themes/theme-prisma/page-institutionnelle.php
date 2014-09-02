@@ -11,7 +11,7 @@ else $bg = '';
 <header class="section bg-intro" style="background-image: url('<?php echo $bg;?>')">
 	<div class="row">
 		<div class="col-xs-5 col-xs-offset-1">
-			<h1 class="text-primary h2">
+			<h1 class="">
 			    <?php echo roots_title(); ?>
 			  </h1>
 			  <?php if (get_field('sous_titre')) { ?>
