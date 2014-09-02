@@ -38,13 +38,17 @@ var Roots = {
             pageScroller.next();
         });
 
-        $('ul.sf-menu').superfish();   
+        $('ul.sf-menu').superfish();
+
+
+
 
     }
   },
   // Home page
   home: {
     init: function() {
+
 
         $('.carousel').owlCarousel({
           loop:false,
@@ -56,6 +60,8 @@ var Roots = {
           nav:true,
           navText:[,]
         });
+
+
     }
   },
   // single page
@@ -68,7 +74,7 @@ var Roots = {
           var item = event.item.index;
           updateResult(".owlItem", item);
           updateResult(".owlItems", items);
-        })
+        });
 
         $('.slider').owlCarousel({
           items:1,
@@ -79,22 +85,20 @@ var Roots = {
       
         $(".nav-slider .next").click(function(){
           $('.slider').trigger('next.owl.carousel');
-        })
+        });
 
         $(".nav-slider .prev").click(function(){
           $('.slider').trigger('prev.owl.carousel');
-        })
+        });
 
         function updateResult(pos, value){
           $(".nav-slider").find(pos).text(value);
         }
         
         $(".slider").on('translated.owl.carousel', function(event) {
-          var items = event.item.count;
           var item = event.item.index;
           updateResult(".owlItem", item);
-          updateResult(".owlItems", items);
-        })
+        });
     }
   },
 
@@ -120,12 +124,19 @@ var Roots = {
     init: function() {
       // slider
 
+       $(".slider").on('initialized.owl.carousel', function(event) {
+          var items = event.item.count;
+          var item = event.item.index;
+          updateResult(".owlItem", item);
+          updateResult(".owlItems", items);
+        });
+
         $('.slider').owlCarousel({
           items:1,
           dots:false,
           autoHeight:true,
           autoplay:true,
-          loop:false,
+          loop:true,
           nav:false
         });
       
@@ -136,7 +147,16 @@ var Roots = {
       $(".nav-slider .prev").click(function(){
         $('.slider').trigger('prev.owl.carousel');
       })
+
+      function updateResult(pos, value){
+          $(".nav-slider").find(pos).text(value);
+        }
         
+        $(".slider").on('translated.owl.carousel', function(event) {
+          var item = event.item.index;
+          updateResult(".owlItem", item);
+        });
+
     }
   },
 

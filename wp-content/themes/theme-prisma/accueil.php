@@ -80,6 +80,7 @@ if( have_rows('slider') ):
 
         <div class="arrow nav-slider text-right">
           <a href="#" class="prev"><span class="icon icon-arrow-left"></span></a>
+          <a><span class="owlItem"></span> / <span class="owlItems"></span></a>
           <a href="#" class="next bloc"><span class="icon icon-arrow-right"></span></a>
         </div><!-- /nav wrapper -->
 
