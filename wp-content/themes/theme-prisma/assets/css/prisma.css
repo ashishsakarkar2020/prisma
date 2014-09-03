@@ -1,6 +1,6 @@
 body {
 	border-top: 10px solid #29235c;
-	background: url('../img/bg.jpg') no-repeat fixed top center;
+	background: url('../img/bg.jpg') no-repeat fixed top right;
 }
 
 .container {
@@ -129,11 +129,13 @@ body {
 	text-decoration: none;
 	float: left;
 	color: #fff;
+	cursor: pointer;
 }
 
 .nav-section.arrow a {
 	margin-bottom: 10px;
 	background: #29235c;
+	
 }
 
 /*Footer*/
@@ -328,7 +330,7 @@ body {
 .section-carousel {
 	background: #b0c01e url('../img/bg-especes.png') bottom center no-repeat;
 	color: #fff;
-	padding-top: 40px;
+	padding: 40px 0;
 }
 
 .section-carousel h1, .section-carousel h2 {
@@ -360,10 +362,22 @@ body {
 	color:#29235c;
 	opacity:1;
 	transform:scale(1.3);
+	margin: 50px 0;
 }
 
 .carousel .owl-stage-outer {
-	height: 300px;
+	min-height: 350px;
+}
+
+/*Gabarit Especes */
+
+.intro-espece {
+	position: absolute;
+	z-index: 100;
+	width: 40%;
+	padding: 20px;
+	background: rgba(255,255,255,0.8);
+	height: 100%;
 }
 
 /*Gabarit institutionel
@@ -377,6 +391,7 @@ body {
 	min-height: 450px;
 	color: #fff;
 	padding-top: 50px;
+	border-bottom: solid 10px #eee;
 }
 
 

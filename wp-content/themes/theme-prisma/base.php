@@ -39,8 +39,8 @@
       </div>
 
        <div class="nav-section arrow" >
-            <a href="#" class="prev-section"><span class="icon icon-arrow-up"></span></a>
-            <a href="#" class="next-section"><span class="icon icon-arrow-down"></span></a>
+            <a class="prev-section"><span class="icon icon-arrow-up"></span></a>
+            <a class="next-section"><span class="icon icon-arrow-down"></span></a>
         </div>
     
     </div><!-- /.content -->

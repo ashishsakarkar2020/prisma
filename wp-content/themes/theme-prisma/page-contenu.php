@@ -6,7 +6,7 @@ Template Name: Contenu
 
 <?php get_template_part('templates/slider'); ?>
 
-<div class="row">
+<div class="row section">
 	<div class="col-xs-10 col-xs-offset-1">
 
 		<?php get_template_part('templates/page', 'header'); ?>

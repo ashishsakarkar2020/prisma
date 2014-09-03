@@ -10,9 +10,17 @@ body {
 
 .carousel .slide {
   z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
 .carousel .center .slide {
   	z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	zomm:1.3;
+}
+
+.intro-espece {
+	background:transparent;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C0ffffff,endColorstr=#C0ffffff);
+  zoom=1;
 }

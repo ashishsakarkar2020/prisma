@@ -79,7 +79,7 @@ while (have_posts()) : the_post(); ?>
 
           <div class="row">
 
-            <div class="col-xs-4">
+            <div class="col-xs-4 intro-espece">
               <header class="wrapper">
                 <h1 class="entry-title text-primary"><?php the_title(); ?></h1>
                 <?php if(get_field('chapo')) { ?>
@@ -88,7 +88,7 @@ while (have_posts()) : the_post(); ?>
               </header>
             </div>
 
-            <div class="col-xs-8">
+            <div class="col-xs-12">
               <?php get_template_part('templates/slider'); ?>
             </div>
 
@@ -134,7 +134,7 @@ while (have_posts()) : the_post(); ?>
             ?>
 
               <li>
-                <h3><a href="<?php the_permalink(); ?>" class="text-warning"><?php the_title(); ?></a> <em class="text-muted"><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
+                <h3><span class="glyphicon glyphicon-hand-right text-warning"></span> <a href="<?php the_permalink(); ?>" class="text-warning"><?php the_title(); ?></a> <em class="text-muted"><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
                 <?php the_sub_field('description'); ?>
 
               </li>
@@ -180,7 +180,7 @@ while (have_posts()) : the_post(); ?>
             ?>
 
               <li>
-                <h3><a href="<?php the_permalink(); ?>" class="text-primary"><?php the_title(); ?></a> <em class="text-muted"><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
+                <h3><span class="glyphicon glyphicon-hand-right text-primary"></span> <a href="<?php the_permalink(); ?>" class="text-primary"><?php the_title(); ?></a> <em class="text-muted"><?php if(get_field('soutitre')) { the_field('soutitre');} ?></em></h3>
                 <?php the_sub_field('description'); ?>
 
               </li>
@@ -262,8 +262,8 @@ while (have_posts()) : the_post(); ?>
 
 <nav>
   <ul class="pager">
-    <li class="previous"><?php previous_post_link('%link', 'catégorie précédente', true,'', 'post_tag'); ?></li>
-    <li class="next"><?php next_post_link('%link', 'catégorie suivante', true, '', 'post_tag'); ?></li>
+    <li class="previous"><?php previous_post_link('%link', '%title', true,'', 'post_tag'); ?></li>
+    <li class="next"><?php next_post_link('%link', '%title', true, '', 'post_tag'); ?></li>
   </ul>
 </nav>
 

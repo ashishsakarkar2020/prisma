@@ -133,31 +133,39 @@ if( have_rows('sections') ):
 
         <?php if( get_row_layout() == 'slider' ):?>
 
-        <section class="section slider">
+        <section class="section">
 
         	<h2 class="text-info"><?php the_sub_field('titre'); ?></h2>
 
 	        <?php $images = get_sub_field('gallery');
-			      $count = 0;
-			      $nbre = count($images);
-			      if( $images ): ?>
-			      <div class="slider-wrapper">
-			        <div id="slider" class="slider-arrow">
-			      
-			          <?php foreach( $images as $image ):
-			            $count = $count + 1;
-			           ?>
-			              <div>
-			                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
-			                  <span class="count"><?php echo $count; ?></span>
-			              </div>
-			              
-			          <?php endforeach; ?>
+ 
+  				if( $images ): ?>
 
-			        </div><!-- /slider -->
+				  <div class="slider-wrapper">
+				    
+				    <div class="slider">
+				  
+				      <?php foreach( $images as $image ):?>
+				          <div>
+				              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
+				          </div>
+				          
+				      <?php endforeach; ?>
 
-		      </div><!-- /slider wrapper -->
-		      <?php endif; ?>
+				    </div><!-- /slider -->
+
+				    <?php if(count($images) != 1) : ?>
+
+					    <div class="arrow nav-slider text-right">
+					      <a class="prev"><span class="icon icon-arrow-left"></span></a>
+					      <a><span class="owlItem"></span> / <span class="owlItems"></span></a>
+					      <a class="next bloc"><span class="icon icon-arrow-right"></span></a>
+					    </div><!-- /nav wrapper -->
+
+				    <?php endif; ?>
+
+				  </div><!-- /slider wrapper -->
+				<?php endif; ?>
 
     	</section>
 
