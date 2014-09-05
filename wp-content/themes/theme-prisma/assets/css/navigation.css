@@ -58,9 +58,10 @@
 .nav-main .level-1 {
 	border-top: 1px #ccc dashed;
 }
-.nav-main li {
-	border-bottom: 1px #ccc dashed;
+.nav-main li + li {
+	border-top: 1px #ccc dashed;
 }
+
 .nav-main .level-1 > li > a {
 	padding: 4px;
 	min-height: 50px;

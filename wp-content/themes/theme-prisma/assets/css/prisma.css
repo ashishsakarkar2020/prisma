@@ -16,6 +16,33 @@ body {
 	z-index: 500;
 }
 
+.reseaux {
+	text-align: right;
+	padding: 0.2em;
+	border-top: 5px solid #29235c;
+	font-size: 2.2em;
+}
+.reseaux a:hover, .reseaux a:focus {
+	text-decoration: none;
+	color: #10a4e4;
+}
+
+.reseaux .socicon-facebook {
+	color: #3c599b;
+}
+.reseaux .socicon-twitter {
+	color: #56a2dc;
+}
+.reseaux .socicon-googleplus {
+	color: #dd4c3b;
+}
+.reseaux .socicon-pinterest {
+	color: #3c599b;
+}
+.reseaux .socicon-youtube {
+	color: #e32a28;
+}
+
 @media (max-width: 1140px) {
 
 	.nav-main {

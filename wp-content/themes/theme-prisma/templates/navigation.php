@@ -46,7 +46,7 @@ $especes = array(
       </li>
    		<li>
         <a href="#">
-          <div class="vbloc"><?php echo get_the_title( 7 ); ?></div>
+          <div class="vbloc">Qui sommes-nous ?</div>
           <div class="vbloc"><span class="icon icon-prisma"></span></div>
         </a>
          <?php if ( has_nav_menu( 'qui-sommes-nous' ) ) {?>
@@ -118,4 +118,11 @@ $especes = array(
         </a>
       </li>
    	</ul>
+    <div class="reseaux">
+      <a href="https://www.facebook.com/pages/Prisma/1374834572806450"><span class="socicon-facebook"></span></a>
+      <a href="https://twitter.com/Prisma_fs"><span class="socicon-twitter"></span></a>
+      <a href="https://plus.google.com/101460845235250406815/about"><span class="socicon-googleplus"></span></a>
+      <a href="http://www.pinterest.com/prisma_fs/"><span class="socicon-pinterest"></span></a>
+      <a href="https://www.youtube.com/channel/UCw67oQXx9yuEGHdlQDVrzlQ?guided_help_flow=3"><span class="socicon-youtube"></span></a>
+    </div>
 </nav>
