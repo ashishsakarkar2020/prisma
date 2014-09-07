@@ -14,7 +14,6 @@ function roots_scripts() {
 
   
   wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.f68b.min.css', false, true, 'all');
-  wp_enqueue_style('prisma', get_template_directory_uri() . '/assets/css/prisma.css', false, true, 'all');
   wp_enqueue_style('theme', get_template_directory_uri() . '/assets/css/theme.css', false, true, 'all');
   wp_enqueue_style('plugins', get_template_directory_uri() . '/assets/css/plugins.3fc1.min.css', false, true, 'all');
 
